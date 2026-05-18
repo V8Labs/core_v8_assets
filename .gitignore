@@ -1,0 +1,8 @@
+.DS_Store
+*.psd
+*.ai
+*.sketch
+*.xd
+.idea/
+.vscode/
+*.tmp
