@@ -31,6 +31,21 @@ https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/branding/<archivo>
 - Color: **#262b39**. Fondo transparente. No deformar ni recolorear.
 - Si no se puede usar imagen, fallback de texto: **V8 Labs**.
 
+## Wordmark por-app
+
+Cada app interna arma su propio wordmark combinando dos pesos de **Balgin
+Expanded**:
+
+- **"V8"** en **Bold** + **"<Nombre>"** en **Regular**, primera mayúscula y
+  pegados. Ejemplos: **V8Metrics**, **V8Studio**.
+- Fuentes en `fonts/balgin/` (`...boldexpanded.otf` / `...regularexpanded.otf`).
+  Online: embebé por `@font-face`. Build-time: copia local por sync.
+- Ejemplo de referencia implementado: `app_V8_METRICS`.
+
+> ⚠️ La Balgin actual es **Fontspring DEMO** (versión de evaluación). Sirve como
+> provisional mientras la marca está en aprobación; al aprobar el look hay que
+> **licenciar Balgin Expanded** para producción/embedding.
+
 ## Colores
 
 | Token | Hex | Uso |

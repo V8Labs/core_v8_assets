@@ -15,6 +15,13 @@
   "tipografia": {
     "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },
     "cuerpo":  { "familia": "PT Serif", "fallback": ["Georgia", "Times New Roman", "serif"] },
+    "wordmark": {
+      "familia": "Balgin Expanded",
+      "fallback": ["Helvetica Neue", "Arial", "sans-serif"],
+      "archivo_bold": "fonts/balgin/Fontspring-DEMO-balgin-boldexpanded.otf",
+      "archivo_regular": "fonts/balgin/Fontspring-DEMO-balgin-regularexpanded.otf",
+      "licencia": "Fontspring DEMO (evaluación) — provisional; licenciar Balgin para producción"
+    },
     "tamanos_pt": { "titulo": 22, "h1": 13, "base": 11, "pie": 8 }
   },
   "espaciado": {
@@ -26,7 +33,14 @@
     "png": "branding/logo.png",
     "png_hi": "branding/logo-hi.png",
     "color": "#262b39",
-    "fondo": "transparente"
+    "fondo": "transparente",
+    "wordmark_por_app": {
+      "patron": "V8 + <Nombre>",
+      "v8": "Balgin Expanded Bold",
+      "nombre": "Balgin Expanded Regular",
+      "regla": "Nombre con primera mayúscula, pegado a V8. Ej: V8Metrics, V8Studio",
+      "ejemplo_ref": "app_V8_METRICS → V8Metrics"
+    }
   },
   "empresa": {
     "nombre_comercial": "V8 Labs",
