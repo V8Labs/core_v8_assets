@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "marca": "V8 Labs",
+    "estado": "provisional",
+    "actualizado": "2026-05-26",
+    "nota": "Diseño en aprobación. Mientras tanto se itera en V8Labs/ops-admin-documentos (marca/tema.typ); esta es la copia publicada para que otras apps arranquen. Al aprobar el look, este archivo queda como fuente de verdad.",
+    "raw_url_base": "https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/"
+  },
+  "color": {
+    "primario": "#262b39",
+    "texto": "#1a1a1a",
+    "tenue": "#6b7280",
+    "linea": "#d1d5db"
+  },
+  "tipografia": {
+    "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },
+    "cuerpo":  { "familia": "PT Serif", "fallback": ["Georgia", "Times New Roman", "serif"] },
+    "tamanos_pt": { "titulo": 22, "h1": 13, "base": 11, "pie": 8 }
+  },
+  "espaciado": {
+    "interlineado": "0.8em",
+    "parrafo": "1.1em"
+  },
+  "logo": {
+    "svg": "branding/logo.svg",
+    "png": "branding/logo.png",
+    "png_hi": "branding/logo-hi.png",
+    "color": "#262b39",
+    "fondo": "transparente"
+  },
+  "empresa": {
+    "nombre_comercial": "V8 Labs",
+    "razon_social": "V8 Labs S.A.S.",
+    "nit": "901920939-6"
+  }
+}

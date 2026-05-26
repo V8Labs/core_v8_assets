@@ -43,6 +43,17 @@ core_v8_assets/
 └── misc/            ← lo que no encaje
 ```
 
+## Sistema de marca
+
+La identidad de V8 Labs (logo, colores, tipografía) es un **sistema compartido**
+que toda app debe seguir:
+
+- **[`branding/BRANDING.md`](branding/BRANDING.md)** — guía legible + cómo consumirla.
+- **[`branding/brand-tokens.json`](branding/brand-tokens.json)** — valores machine-readable (colores, fuentes, espaciados, logos).
+- `branding/logo.svg` · `logo.png` · `logo-hi.png` — logos canónicos.
+
+Estado actual: provisional. Se itera en `ops-admin-documentos` hasta aprobar el diseño.
+
 ## Reglas
 
 - **Es público.** Cualquier cosa aquí es visible a todo el mundo. **NO subir nada confidencial** (NDAs, fotos privadas de clientes, info personal).
@@ -60,4 +71,4 @@ core_v8_assets/
 
 | App / Script | Asset usado |
 |---|---|
-| (vacío — actualizar conforme se agregue uso) | |
+| `ops-admin-documentos` | `branding/` (sistema de marca: tokens + logos) |
