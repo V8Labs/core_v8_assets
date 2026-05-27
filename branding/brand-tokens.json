@@ -2,7 +2,7 @@
   "meta": {
     "marca": "V8 Labs",
     "estado": "provisional",
-    "actualizado": "2026-05-26",
+    "actualizado": "2026-05-27",
     "nota": "Diseño en aprobación. Mientras tanto se itera en V8Labs/ops-admin-documentos (marca/tema.typ); esta es la copia publicada para que otras apps arranquen. Al aprobar el look, este archivo queda como fuente de verdad.",
     "raw_url_base": "https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/"
   },
@@ -10,7 +10,21 @@
     "primario": "#262b39",
     "texto": "#1a1a1a",
     "tenue": "#6b7280",
-    "linea": "#d1d5db"
+    "linea": "#d1d5db",
+    "notion": {
+      "_nota": "Versión viva (cartel suizo Basel) de los 10 colores NOMBRADOS de Notion. Para estados/tags/select de cualquier app. Notion solo maneja estos 10 nombres (no hex); la app rinde el nombre con este hex. Texto siempre negro (texto_sobre).",
+      "texto_sobre": "#161616",
+      "default": "#E8E5DD",
+      "gray": "#9AA0AC",
+      "brown": "#B0764A",
+      "orange": "#F2872E",
+      "yellow": "#FCE302",
+      "green": "#3FBE83",
+      "blue": "#3D7CD6",
+      "purple": "#8E6BD4",
+      "pink": "#F5BFCB",
+      "red": "#F26159"
+    }
   },
   "tipografia": {
     "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },

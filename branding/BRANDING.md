@@ -55,6 +55,32 @@ Expanded**:
 | `color.tenue` | `#6b7280` | metadatos, pies, secundario |
 | `color.linea` | `#d1d5db` | reglas y bordes suaves |
 
+### Paleta de estados — colores Notion vivos (`color.notion`)
+
+Versión **viva y plana** (estética cartel suizo, ref. Musik Akademie Basel) de
+los **10 colores nombrados de Notion**. Notion solo maneja estos 10 nombres (no
+acepta hex arbitrario); cada opción de un select/status/tag en Notion lleva uno,
+y la app lo **rinde vívido** con este hex. **Texto siempre negro** (`color.notion.texto_sobre`)
+sobre el bloque. Sirve para estados de tareas, tags, y cualquier propiedad
+coloreada de cualquier app del ecosistema.
+
+| Nombre Notion | Hex |
+|---|---|
+| `default` | `#E8E5DD` |
+| `gray` | `#9AA0AC` |
+| `brown` | `#B0764A` |
+| `orange` | `#F2872E` |
+| `yellow` | `#FCE302` |
+| `green` | `#3FBE83` |
+| `blue` | `#3D7CD6` |
+| `purple` | `#8E6BD4` |
+| `pink` | `#F5BFCB` |
+| `red` | `#F26159` |
+
+> El mapeo *opción de estado → nombre de color* lo define cada base en Notion
+> (lo ingiere Mirror a `notion_schema_registry.property_config`). Acá vive solo
+> el hex por nombre. El rojo destructivo de UI (`#E11900`) NO es este `red`.
+
 ## Tipografía
 
 | Token | Familia | Fallback |
