@@ -48,14 +48,33 @@ Expanded**:
 
 ## Colores
 
+### Paleta de marca (identidad)
+
 | Token | Hex | Uso |
 |---|---|---|
-| `color.primario` | `#262b39` | títulos, reglas |
-| `color.acento` | `#A2E771` | énfasis / CTA — verde lima (origen: app de firma Documenso) |
-| `color.acento_texto` | `#163309` | texto sobre fondo `acento` (verde oscuro, contraste) |
+| `color.primario` | `#262b39` | fondo base de apps, títulos, reglas |
 | `color.texto` | `#1a1a1a` | texto cuerpo |
 | `color.tenue` | `#6b7280` | metadatos, pies, secundario |
 | `color.linea` | `#d1d5db` | reglas y bordes suaves |
+| `color.acento` | `#A2E771` | **acento vivo** — ver regla dura abajo |
+| `color.acento_texto` | `#163309` | texto sobre verde, **solo** en el caso raro de que el verde sea fondo (evitar) |
+
+### ⚠️ Regla dura del verde `acento` (#A2E771)
+
+El verde es **acento de vida, no superficie**. Le da luz y energía a la interfaz;
+nunca la estructura. Es el destello, no el relleno.
+
+- ✅ **Permitido:** subrayado de enlaces · líneas vivas bajo palabras clave ·
+  glow / animación de marcos y bordes · micro-acentos que "encienden" un frame.
+- ❌ **Prohibido:** fondo de botón · relleno de bloques o tarjetas · fondo de
+  tab/sección activa · cualquier área extensa. **El verde nunca es la superficie.**
+
+Los **botones** usan la base (`primario` / negro / blanco) o el color **semántico**
+de la acción (ver UX), **nunca** el verde de marca. Negro y blanco son la base;
+el verde solo acentúa (enlaces, subrayados, animaciones vivas).
+
+> Origen del verde: app de firma (Documenso). Nota: fue Documenso quien lo usó
+> primero como fondo de botón — eso es el antipatrón que esta regla corrige.
 
 ## Tipografía
 

@@ -14,6 +14,16 @@
     "tenue": "#6b7280",
     "linea": "#d1d5db"
   },
+  "color_uso": {
+    "$nota": "Reglas de USO del color (ver BRANDING.md §Colores). No son valores nuevos; gobiernan dónde se aplica cada token.",
+    "primario": "fondo base, títulos, reglas",
+    "acento": {
+      "rol": "acento vivo — destello, no superficie",
+      "permitido": ["subrayado de enlaces", "líneas vivas bajo palabras", "glow/animación de marcos y bordes", "micro-acentos que encienden un frame"],
+      "prohibido": ["fondo de botón", "relleno de bloques/tarjetas", "fondo de tab/sección", "áreas extensas"]
+    },
+    "botones": "base (primario/negro/blanco) o color semántico de la acción; NUNCA el verde acento"
+  },
   "tipografia": {
     "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },
     "cuerpo":  { "familia": "PT Serif", "fallback": ["Georgia", "Times New Roman", "serif"] },
