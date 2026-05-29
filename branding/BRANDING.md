@@ -46,6 +46,21 @@ Expanded**:
 > provisional mientras la marca está en aprobación; al aprobar el look hay que
 > **licenciar Balgin Expanded** para producción/embedding.
 
+## Sellos por app (marca de presencia interna)
+
+Cada app/servicio del ecosistema (`app_V8_XXXX`, `core_v8_mind`) tiene un **sello**:
+pastilla con el nombre en **Balgin Expanded Regular**, **inicial capitular** (primera
+letra más grande) y el resto Title-case, con los glifos **outlineados a trazos**
+(portable, no depende de tener la fuente). Color `#8a8f9c` tenue, al tamaño de un chip
+(~16–20px de alto). Marca la presencia de la marca interna "al servicio" (ej. el header
+del chat con el agente).
+
+- Archivos: `branding/seals/<slug>.svg` — `notifications · metrics · studio · dialogue ·
+  ecommerce · fashion · retailers · mind`.
+- Regenerar (al sumar una app): `branding/seals/_generate.py` (fonttools + Balgin).
+- Las apps **consumen una copia** build-time; no redefinen el sello.
+- ⚠️ Misma deuda que el wordmark: Balgin es **DEMO/provisional** → licenciar para producción.
+
 ## Colores
 
 | Token | Hex | Uso |
