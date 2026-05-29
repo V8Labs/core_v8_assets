@@ -8,6 +8,8 @@
   },
   "color": {
     "primario": "#262b39",
+    "acento": "#A2E771",
+    "acento_texto": "#163309",
     "texto": "#1a1a1a",
     "tenue": "#6b7280",
     "linea": "#d1d5db"
