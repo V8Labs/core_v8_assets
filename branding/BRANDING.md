@@ -50,7 +50,9 @@ Expanded**:
 
 | Token | Hex | Uso |
 |---|---|---|
-| `color.primario` | `#262b39` | títulos, acentos, reglas |
+| `color.primario` | `#262b39` | títulos, reglas |
+| `color.acento` | `#A2E771` | énfasis / CTA — verde lima (origen: app de firma Documenso) |
+| `color.acento_texto` | `#163309` | texto sobre fondo `acento` (verde oscuro, contraste) |
 | `color.texto` | `#1a1a1a` | texto cuerpo |
 | `color.tenue` | `#6b7280` | metadatos, pies, secundario |
 | `color.linea` | `#d1d5db` | reglas y bordes suaves |
