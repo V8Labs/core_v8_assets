@@ -2,7 +2,7 @@
   "meta": {
     "marca": "V8 Labs",
     "estado": "provisional",
-    "actualizado": "2026-05-26",
+    "actualizado": "2026-05-31",
     "nota": "Diseño en aprobación. Mientras tanto se itera en V8Labs/ops-admin-documentos (marca/tema.typ); esta es la copia publicada para que otras apps arranquen. Al aprobar el look, este archivo queda como fuente de verdad.",
     "raw_url_base": "https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/"
   },
@@ -20,9 +20,25 @@
     "acento": {
       "rol": "acento vivo — destello, no superficie",
       "permitido": ["subrayado de enlaces", "líneas vivas bajo palabras", "glow/animación de marcos y bordes", "micro-acentos que encienden un frame"],
-      "prohibido": ["fondo de botón", "relleno de bloques/tarjetas", "fondo de tab/sección", "áreas extensas"]
+      "prohibido": ["fondo de botón", "relleno de bloques/tarjetas", "fondo de tab/sección", "áreas extensas"],
+      "resolucion_light": {
+        "$nota": "Cuando el acento debe destellar sobre superficie clara (modo light, fondos blancos/grises), el lime puro pierde contraste. Patrón sancionado: envolver el texto del acento en un PILL OSCURO INVERTIDO — fondo = color.primario, texto = color.acento. Mantiene el hex canónico del acento intacto; solo cambia el envoltorio. Sin redondeo (geometria.radio_chip = 0).",
+        "patron": "pill-invertido",
+        "fondo": "color.primario",
+        "texto": "color.acento",
+        "radio": "geometria.radio_chip",
+        "padding": "0.0625rem 0.4rem",
+        "ejemplo_uso": ["chip 'PENDIENTE' en cards", "score ≥80 de operador", "ack inline de mind", "botón LIMPIAR filtros"]
+      }
     },
     "botones": "base (primario/negro/blanco) o color semántico de la acción; NUNCA el verde acento"
+  },
+  "geometria": {
+    "$nota": "V8 industrial: sin redondeo. Las esquinas rectas dan al sistema su lectura técnica/maquila. Border-radius en chips, badges, pills, modales y botones = 0 por defecto. Cualquier redondeo requiere justificación explícita y vivirá acá como excepción documentada.",
+    "radio_chip": "0",
+    "radio_modal": "0",
+    "radio_boton": "0",
+    "radio_input": "0"
   },
   "tipografia": {
     "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },

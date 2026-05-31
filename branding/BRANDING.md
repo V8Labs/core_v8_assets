@@ -76,6 +76,44 @@ el verde solo acentúa (enlaces, subrayados, animaciones vivas).
 > Origen del verde: app de firma (Documenso). Nota: fue Documenso quien lo usó
 > primero como fondo de botón — eso es el antipatrón que esta regla corrige.
 
+### Resolución del acento contra fondos claros (modo light)
+
+Sobre fondo oscuro (modo default), el lime `#A2E771` tiene contraste perfecto.
+Sobre fondo claro (modo light, gris-azulado templado o blanco), el lime puro se
+diluye y se vuelve ilegible. **No se sustituye el lime por otro verde** — el hex
+del acento es el hex del acento.
+
+**Patrón sancionado: pill oscuro invertido.** Donde el acento deba aparecer como
+texto sobre superficie clara, se envuelve en un fondo `color.primario` con texto
+`color.acento`. Es el dark invertido localmente: cero pérdida de fidelidad al
+token, máximo contraste preservado.
+
+- ✅ Aplica en: chips de slot vacío (PENDIENTE, SIN FECHA), score ≥80 de
+  operador, ack inline de Mind, botón LIMPIAR filtros, badge de audio listo.
+- ❌ No aplica para líneas/bordes/glows — esos siguen siendo lime suelto en
+  ambos modos (ya tienen contraste por trazo, no por fill).
+- Glyphs decorativos sueltos (flechas, ⤷): caen al `color.texto` en light en
+  vez de pillarse, porque el pill sobre un solo carácter rompe la lectura.
+
+Implementación de referencia: utility CSS `v8-accent-chip` en
+`app_V8_NOTIFICATIONS/src/index.css`.
+
+## Geometría
+
+**V8 industrial: sin redondeo.** Las esquinas rectas dan al sistema su lectura
+técnica de maquila/herramienta interna. Esquinas redondeadas pertenecen al
+lenguaje de consumer apps, no al de V8.
+
+| Token | Valor | Aplica a |
+|---|---|---|
+| `geometria.radio_chip` | `0` | chips, badges, pills, tags |
+| `geometria.radio_modal` | `0` | modales, drawers, sheets |
+| `geometria.radio_boton` | `0` | botones, controles táctiles |
+| `geometria.radio_input` | `0` | inputs, textareas, selects |
+
+Cualquier redondeo requiere justificación explícita (ej. avatares circulares de
+operadores — caso documentado aparte) y vive en este archivo como excepción.
+
 ## Tipografía
 
 | Token | Familia | Fallback |
