@@ -68,8 +68,9 @@ Inicial vectorizada a paths (no embebe fuente). Iniciales por app:
 | studio | `S` | | dialogue | `D` |
 | metrics | `M` | | retailers | `R` |
 | mind | `Mi` | | fashion | `F` |
+| dealers | `De` | | | |
 
-> Colisión Mind/Metrics resuelta: Metrics=`M`, Mind=`Mi`.
+> Colisiones resueltas: Metrics=`M`/Mind=`Mi` · dialogue=`D`/dealers=`De`.
 
 **Excepción bespoke (concepto):** cuando el dominio pide un símbolo fuerte, favicon
 conceptual en el mismo lenguaje (cuerpo `primario`, line-art blanco, punto `acento`):

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 dealers">
+  <!-- Favicon monograma V8 dealers. Inicial "De" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,25.19) scale(0.01908,-0.01908) translate(-64.00,-700.00)" fill="#FFFFFF"><path d="M64.0 0H574.0C880.0 0 1072.0 146 1072.0 350C1072.0 554 877.0 700 574.0 700H64.0ZM357.0 197V504H584.0C691.0 504 772.0 440 772.0 350C772.0 261 691.0 197 584.0 197ZM1572.0 -14C1681.0 -14 1795.0 3 1863.0 27L1836.0 170C1765.0 143 1679.0 130 1595.0 130C1476.0 130 1403.0 167 1382.0 218H1932.0C1937.0 230 1942.0 262 1942.0 276C1942.0 430 1774.0 549 1544.0 549C1303.0 549 1133.0 434 1133.0 269C1133.0 133 1272.0 -14 1572.0 -14ZM1370.0 300C1383.0 363 1454.0 403 1548.0 403C1644.0 403 1719.0 355 1714.0 300Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>
