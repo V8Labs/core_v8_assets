@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 mind">
+  <!-- Favicon monograma V8 mind. Inicial "Mi" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,24.29) scale(0.01946,-0.01946) translate(-47.00,-791.00)" fill="#FFFFFF"><path d="M47.0 0H390.0L514.0 298H523.0L764.0 -2H796.0L1037.0 298H1046.0L1171.0 0H1513.0L1171.0 722H1135.0L784.0 340H775.0L426.0 722H391.0ZM1739.0 577C1832.0 577 1889.0 624 1889.0 684C1889.0 744 1832.0 791 1739.0 791C1646.0 791 1589.0 744 1589.0 684C1589.0 624 1646.0 577 1739.0 577ZM1601.0 0H1873.0V535H1601.0Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>

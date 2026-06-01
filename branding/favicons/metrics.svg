@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 metrics">
+  <!-- Favicon monograma V8 metrics. Inicial "M" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,23.15) scale(0.02445,-0.02445) translate(-47.00,-722.00)" fill="#FFFFFF"><path d="M47.0 0H390.0L514.0 298H523.0L764.0 -2H796.0L1037.0 298H1046.0L1171.0 0H1513.0L1171.0 722H1135.0L784.0 340H775.0L426.0 722H391.0Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 fashion">
+  <!-- Favicon monograma V8 fashion. Inicial "F" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,18.12) scale(0.03965,-0.03965) translate(-64.00,-700.00)" fill="#FFFFFF"><path d="M64.0 0H357.0V242H884.0V390H357.0V506H968.0V700H64.0Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>

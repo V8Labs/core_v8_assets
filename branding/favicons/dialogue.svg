@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 dialogue">
+  <!-- Favicon monograma V8 dialogue. Inicial "D" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,19.56) scale(0.03556,-0.03556) translate(-64.00,-700.00)" fill="#FFFFFF"><path d="M64.0 0H574.0C880.0 0 1072.0 146 1072.0 350C1072.0 554 877.0 700 574.0 700H64.0ZM357.0 197V504H584.0C691.0 504 772.0 440 772.0 350C772.0 261 691.0 197 584.0 197Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>
