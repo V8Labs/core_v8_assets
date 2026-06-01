@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 notifications">
+  <!-- Favicon monograma V8 notifications. Inicial "V8" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,25.86) scale(0.01669,-0.01669) translate(-4.00,-714.00)" fill="#FFFFFF"><path d="M559.0 -22H590.0L1144.0 700H835.0L577.0 349H571.0L315.0 700H4.0ZM1678.0 -14C1967.0 -14 2151.0 69 2151.0 197C2151.0 283 2087.0 344 1938.0 369V379C2048.0 395 2108.0 459 2108.0 529C2108.0 633 1974.0 714 1678.0 714C1382.0 714 1247.0 633 1247.0 529C1247.0 459 1307.0 395 1417.0 379V369C1268.0 344 1204.0 283 1204.0 197C1204.0 69 1389.0 -14 1678.0 -14ZM1678.0 414C1587.0 414 1534.0 440 1534.0 481C1534.0 521 1587.0 548 1678.0 548C1768.0 548 1821.0 521 1821.0 481C1821.0 440 1768.0 414 1678.0 414ZM1678.0 161C1571.0 161 1506.0 192 1506.0 238C1506.0 284 1571.0 317 1678.0 317C1785.0 317 1848.0 284 1848.0 238C1848.0 192 1785.0 161 1678.0 161Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>

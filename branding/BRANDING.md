@@ -46,6 +46,35 @@ Expanded**:
 > provisional mientras la marca está en aprobación; al aprobar el look hay que
 > **licenciar Balgin Expanded** para producción/embedding.
 
+**Wordmarks listos / generables:** `branding/wordmarks/`. Cada app tiene su SVG
+vectorizado a paths (no requiere la fuente en el cliente). Generar uno nuevo:
+`/tmp/fontvenv/bin/python branding/wordmarks/_generate.py <Nombre>` → `wordmark-v8<nombre>.svg`.
+Existentes: `wordmark-v8studio.svg`. ⚠️ Por la licencia DEMO, **vectorizá el wordmark a
+paths** (lo que hace el generador) en vez de embeber el `.otf` en una app desplegada.
+
+## Favicons
+
+`branding/favicons/` — un favicon por proyecto. Respetan la regla del verde
+(acento solo como destello, nunca fondo).
+
+**Sistema MONOGRAMA (default):** inicial(es) en Balgin Expanded Bold, blanco sobre
+`primario #262b39`, esquinas duras, + punto `acento` abajo-derecha como firma de familia.
+Generar: `/tmp/fontvenv/bin/python branding/favicons/_generate_monogram.py <app> <inicial>`.
+Inicial vectorizada a paths (no embebe fuente). Iniciales por app:
+
+| App | Inicial | · | App | Inicial |
+|---|---|---|---|---|
+| notifications | `V8` | | ecommerce | `E` |
+| studio | `S` | | dialogue | `D` |
+| metrics | `M` | | retailers | `R` |
+| mind | `Mi` | | fashion | `F` |
+
+> Colisión Mind/Metrics resuelta: Metrics=`M`, Mind=`Mi`.
+
+**Excepción bespoke (concepto):** cuando el dominio pide un símbolo fuerte, favicon
+conceptual en el mismo lenguaje (cuerpo `primario`, line-art blanco, punto `acento`):
+- `firma-seguridad.svg` — caja fuerte (familia seguridad/legal, ej. `firma.v8labs.co`).
+
 ## Colores
 
 ### Paleta de marca (identidad)

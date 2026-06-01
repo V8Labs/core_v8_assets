@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="V8 retailers">
+  <!-- Favicon monograma V8 retailers. Inicial "R" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,19.26) scale(0.03639,-0.03639) translate(-64.00,-700.00)" fill="#FFFFFF"><path d="M64.0 0H356.0V208H564.0L734.0 0H1049.0L806.0 283C942.0 306 1026.0 379 1026.0 489C1026.0 627 892.0 700 693.0 700H64.0ZM356.0 365V509H613.0C683.0 509 730.0 483 730.0 438C730.0 393 680.0 365 611.0 365Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>
