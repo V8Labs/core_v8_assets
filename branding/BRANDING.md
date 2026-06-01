@@ -46,6 +46,19 @@ Expanded**:
 > provisional mientras la marca está en aprobación; al aprobar el look hay que
 > **licenciar Balgin Expanded** para producción/embedding.
 
+**Wordmarks listos / generables:** `branding/wordmarks/`. Cada app tiene su SVG
+vectorizado a paths (no requiere la fuente en el cliente). Generar uno nuevo:
+`/tmp/fontvenv/bin/python branding/wordmarks/_generate.py <Nombre>` → `wordmark-v8<nombre>.svg`.
+Existentes: `wordmark-v8studio.svg`. ⚠️ Por la licencia DEMO, **vectorizá el wordmark a
+paths** (lo que hace el generador) en vez de embeber el `.otf` en una app desplegada.
+
+## Favicons
+
+`branding/favicons/` — íconos de pestaña por familia de app. Respetan la regla del
+verde (acento solo como destello, nunca fondo). Existentes:
+- `firma-seguridad.svg` — caja fuerte (familia seguridad/legal, ej. `firma.v8labs.co`):
+  cuerpo `primario`, dial blanco, punto central `acento`.
+
 ## Colores
 
 ### Paleta de marca (identidad)
