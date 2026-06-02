@@ -19,9 +19,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 
 name = sys.argv[1] if len(sys.argv) > 1 else "Studio"   # "V8" + este nombre
+variant = sys.argv[2].lower() if len(sys.argv) > 2 else "dark"  # "dark" (#262b39) | "blanco" (#FFFFFF, fondos oscuros)
 PAD = 40            # padding en unidades EM alrededor del lockup
 tokens = json.load(open(os.path.join(ROOT, "branding", "brand-tokens.json")))
-FILL = tokens["color"]["primario"]
+FILL = "#FFFFFF" if variant == "blanco" else tokens["color"]["primario"]
+SUFFIX = "-blanco" if variant == "blanco" else ""
 wm = tokens["tipografia"]["wordmark"]
 BOLD = os.path.join(ROOT, wm["archivo_bold"])
 REG  = os.path.join(ROOT, wm["archivo_regular"])
@@ -66,6 +68,6 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vb_w:.0f} {vb_h:
   <g transform="{transform}" fill="{FILL}"><path d="{path_d}"/></g>
 </svg>
 '''
-out = os.path.join(HERE, f"wordmark-v8{name.lower()}.svg")
+out = os.path.join(HERE, f"wordmark-v8{name.lower()}{SUFFIX}.svg")
 open(out, "w").write(svg)
 print(f"OK -> {out}  ({vb_w:.0f}x{vb_h:.0f} EM, fill {FILL})")
