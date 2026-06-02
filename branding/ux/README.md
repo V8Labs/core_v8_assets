@@ -6,6 +6,10 @@ tipografía, logo, datos de empresa. Pero las apps (`app_V8_NOTIFICATIONS`,
 voz de UI** que se repetirían descoordinados si cada app los reinventa. Este
 documento define **cómo eso entra al canónico sin caos**.
 
+> 📕 **Manual de patrones canónico:** [`UX-PATTERNS.md`](UX-PATTERNS.md) — sistema de
+> diseño completo (filosofía, tipografía, geometría, color, layouts, componentes, gestos,
+> auth, anti-patterns). Origen: notifications; curado y asentado por branding (2026-06-01).
+
 ## Principio rector (regla de oro)
 
 > **La app CONSUME, no REDEFINE.** Si una app necesita un token, patrón o
@@ -72,10 +76,10 @@ Cada patrón documenta, en orden:
   semántico `#3FBE83` es OTRO verde, distinto del `acento #A2E771` de marca: el
   semántico SÍ puede rellenar un botón de confirmar; el de marca no. No confundirlos.
 
-### Patrones a documentar (de notifications)
-swipe-armed confirmation slot · confirm-modal con motivo · picker con buscador
-interno · AutoGrowTextarea (Enter = salto, nunca submit) · auth-gateway · card
-system (kanban). Cada uno entra como `patterns/*.md` vía PR.
+### Patrones (de notifications) — ✅ documentados en `UX-PATTERNS.md`
+swipe-armed, confirm-modal, picker con buscador, AutoGrowTextarea, auth-gateway, card
+system (kanban) y demás ya viven en [`UX-PATTERNS.md`](UX-PATTERNS.md). Si alguno crece a
+necesitar su propio archivo detallado, se desglosa a `patterns/<nombre>.md` vía PR.
 
 ### Iconografía
 Set minimal line de notifications (`src/components/icons/`). Decisión pendiente:
