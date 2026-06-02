@@ -24,9 +24,11 @@ from fontTools.pens.transformPen import TransformPen
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))  # repo root
 
-TEXT = "V8"
+import sys
+TEXT = sys.argv[1] if len(sys.argv) > 1 else "V8"           # monograma a centrar
+OUTNAME = sys.argv[2] if len(sys.argv) > 2 else "v8-wordmark-splash"  # nombre de salida (sin ext)
 CANVAS = 1024          # lienzo cuadrado (base PWA)
-TARGET_FRAC = 0.62     # ancho/alto objetivo de "V8" dentro del lienzo (zona segura iOS)
+TARGET_FRAC = 0.62     # ancho/alto objetivo del monograma dentro del lienzo (zona segura iOS)
 
 tokens = json.load(open(os.path.join(ROOT, "branding", "brand-tokens.json")))
 BG = tokens["color"]["primario"]          # #262b39
@@ -81,7 +83,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS}" height="{CANV
 </svg>
 '''
 
-out = os.path.join(HERE, "v8-wordmark-splash.svg")
+out = os.path.join(HERE, f"{OUTNAME}.svg")
 open(out, "w").write(svg)
 print(f"OK -> {out}")
 print(f"   glyph bbox font-units: {gw:.0f} x {gh:.0f}  scale={scale:.4f}  draw={dw:.0f}x{dh:.0f}px")
