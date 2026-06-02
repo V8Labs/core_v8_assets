@@ -64,11 +64,11 @@
     "color": "#262b39",
     "fondo": "transparente",
     "wordmark_por_app": {
-      "patron": "V8 + <Nombre>",
+      "patron": "V8 + \" \" + <Nombre>",
       "v8": "Balgin Expanded Bold",
       "nombre": "Balgin Expanded Regular",
-      "regla": "Nombre con primera mayúscula, pegado a V8. Ej: V8Metrics, V8Studio",
-      "ejemplo_ref": "app_V8_METRICS → V8Metrics"
+      "regla": "Nombre con primera mayúscula, separado de V8 por UN ESPACIO. Ej: V8 Metrics, V8 Studio. (Cambio de doctrina 2026-06-02 pedido por Andy: antes iba pegado.)",
+      "ejemplo_ref": "app_V8_METRICS → V8 Metrics"
     }
   },
   "empresa": {

@@ -36,8 +36,9 @@ https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/branding/<archivo>
 Cada app interna arma su propio wordmark combinando dos pesos de **Balgin
 Expanded**:
 
-- **"V8"** en **Bold** + **"<Nombre>"** en **Regular**, primera mayúscula y
-  pegados. Ejemplos: **V8Metrics**, **V8Studio**.
+- **"V8"** en **Bold** + un **ESPACIO** + **"<Nombre>"** en **Regular**, primera
+  mayúscula. Ejemplos: **V8 Metrics**, **V8 Studio**.
+  > Doctrina actualizada 2026-06-02 (Andy): antes iba pegado (`V8Studio`); ahora con espacio (`V8 Studio`).
 - Fuentes en `fonts/balgin/` (`...boldexpanded.otf` / `...regularexpanded.otf`).
   Online: embebé por `@font-face`. Build-time: copia local por sync.
 - Ejemplo de referencia implementado: `app_V8_METRICS`.

@@ -26,8 +26,8 @@ wm = tokens["tipografia"]["wordmark"]
 BOLD = os.path.join(ROOT, wm["archivo_bold"])
 REG  = os.path.join(ROOT, wm["archivo_regular"])
 
-# (texto, fuente) por tramo. "V8" bold, el nombre regular — pegados.
-segments = [("V8", BOLD), (name, REG)]
+# (texto, fuente) por tramo. "V8" bold + ESPACIO + nombre regular (doctrina 2026-06-02).
+segments = [("V8", BOLD), (" " + name, REG)]
 
 fonts = {p: TTFont(p) for p in {BOLD, REG}}
 EM = fonts[BOLD]["head"].unitsPerEm   # espacio común
