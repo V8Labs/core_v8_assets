@@ -16,6 +16,7 @@
   },
   "color_uso": {
     "$nota": "Reglas de USO del color (ver BRANDING.md §Colores). No son valores nuevos; gobiernan dónde se aplica cada token.",
+    "$scope": "DOS paletas por medio (decisión branding 2026-06-02): `color.*` (este bloque) = DOCUMENTOS / print / landing estática (mundo PT Serif). `ux.superficie.*` = APPS interactivas (mundo Helvetica Condensed, soporta light/dark). `color.tenue`≈`ux.*.fg_mute` y `color.linea`≈`ux.*.line` son análogos por medio, valores distintos a propósito; no unificar.",
     "primario": "fondo base, títulos, reglas",
     "acento": {
       "rol": "acento vivo — destello, no superficie",
