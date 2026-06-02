@@ -74,5 +74,54 @@
     "nombre_comercial": "V8 Labs",
     "razon_social": "V8 Labs S.A.S.",
     "nit": "901920939-6"
+  },
+  "ux": {
+    "$nota": "Tokens de superficie / UI usados por apps del ecosistema (notifications, dealer, studio, etc.). Probados en producción por notifications. Soportan tema light + dark sin reescribir clases — cada app mapea estos valores a CSS vars (--v8-*) y Tailwind colors.v8.*. Ver branding/ux/UX-PATTERNS.md §6 'Color — reglas duras' y §3 'Tokens'.",
+    "superficie": {
+      "$nota": "Capas de superficie: bg = fondo principal, bg_deep = un nivel más profundo (inputs, modales internos), fg = texto primario, fg_mute = secundario, line = bordes/divisores.",
+      "dark": {
+        "bg":      "#262b39",
+        "bg_deep": "#1a1d26",
+        "fg":      "#f1f1f1",
+        "fg_mute": "#8a8f9c",
+        "line":    "#3a3f4d"
+      },
+      "light": {
+        "bg":      "#D9DCE0",
+        "bg_deep": "#C5C9D0",
+        "fg":      "#262b39",
+        "fg_mute": "#5B6371",
+        "line":    "#A6ACB6"
+      }
+    },
+    "accion": {
+      "danger":         "#E11900",
+      "danger_regla": "Reservado EXCLUSIVAMENTE para cancelar/rechazar/eliminar. No usar para errores genéricos ni para 'atención'."
+    },
+    "estados_kanban": {
+      "$nota": "Paleta semántica para la propiedad Estado de tareas/pedidos/operaciones. Inspirada en diseño suizo tipográfico. Cada estado tiene un color de bg pleno; el texto sobre el bg se calcula por contraste (foreground negro o blanco según luminancia).",
+      "borrador":     "#9AA0AC",
+      "sin_empezar":  "#F5D800",
+      "en_progreso":  "#7CC832",
+      "verificar":    "#F08019",
+      "programado":   "#32C8B4",
+      "retrasada":    "#E53019",
+      "terminada":    "#2B9A2B",
+      "cancelada":    "#B0764A"
+    },
+    "fondo_malla": {
+      "$nota": "Sub-paleta DESATURADA INDUSTRIAL para el background mesh (información ambiente, no decoración). Render Canvas2D + Web Worker, regiones de color plano que muestran datasets macroeconómicos. PROHIBIDO usar fuera del fondo malla — sin gradientes, sin glow, sin halo.",
+      "steel":     "#4a5568",
+      "mustard":   "#8a7c4f",
+      "olive":     "#6b7c4f",
+      "slate":     "#5a6478",
+      "sand":      "#8a8775",
+      "charcoal":  "#3a3f4d"
+    },
+    "como_consumir": {
+      "$nota": "Patrón recomendado: definir CSS vars en :root desde estos valores y mapear en tailwind.config.js → colors.v8.<token>. Así toggle dark/light = un solo atributo en <html data-theme>. Ver branding/ux/UX-PATTERNS.md §3.",
+      "tailwind_referencia": "V8Labs/app_V8_NOTIFICATIONS/tailwind.config.js",
+      "css_vars_referencia": "V8Labs/app_V8_NOTIFICATIONS/src/index.css"
+    }
   }
 }
