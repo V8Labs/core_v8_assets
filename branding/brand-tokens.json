@@ -16,12 +16,22 @@
   },
   "color_uso": {
     "$nota": "Reglas de USO del color (ver BRANDING.md §Colores). No son valores nuevos; gobiernan dónde se aplica cada token.",
-    "$scope": "DOS paletas por medio (decisión branding 2026-06-02): `color.*` (este bloque) = DOCUMENTOS / print / landing estática (mundo PT Serif). `ux.superficie.*` = APPS interactivas (mundo Helvetica Condensed, soporta light/dark). `color.tenue`≈`ux.*.fg_mute` y `color.linea`≈`ux.*.line` son análogos por medio, valores distintos a propósito; no unificar.",
+    "$scope": "DOS paletas por medio (decisión branding 2026-06-02): `color.*` (este bloque) = DOCUMENTOS / print / landing estática (mundo PT Serif). `ux.superficie.*` = APPS interactivas (mundo IBM Plex Sans — sistema/UI V8 (la Helvetica Condensed es de FXCKBOY, no de V8), soporta light/dark). `color.tenue`≈`ux.*.fg_mute` y `color.linea`≈`ux.*.line` son análogos por medio, valores distintos a propósito; no unificar.",
     "primario": "fondo base, títulos, reglas",
     "acento": {
       "rol": "acento vivo — destello, no superficie",
-      "permitido": ["subrayado de enlaces", "líneas vivas bajo palabras", "glow/animación de marcos y bordes", "micro-acentos que encienden un frame"],
-      "prohibido": ["fondo de botón", "relleno de bloques/tarjetas", "fondo de tab/sección", "áreas extensas"],
+      "permitido": [
+        "subrayado de enlaces",
+        "líneas vivas bajo palabras",
+        "glow/animación de marcos y bordes",
+        "micro-acentos que encienden un frame"
+      ],
+      "prohibido": [
+        "fondo de botón",
+        "relleno de bloques/tarjetas",
+        "fondo de tab/sección",
+        "áreas extensas"
+      ],
       "resolucion_light": {
         "$nota": "Cuando el acento debe destellar sobre superficie clara (modo light, fondos blancos/grises), el lime puro pierde contraste. Patrón sancionado: envolver el texto del acento en un PILL OSCURO INVERTIDO — fondo = color.primario, texto = color.acento. Mantiene el hex canónico del acento intacto; solo cambia el envoltorio. Sin redondeo (geometria.radio_chip = 0).",
         "patron": "pill-invertido",
@@ -29,7 +39,12 @@
         "texto": "color.acento",
         "radio": "geometria.radio_chip",
         "padding": "0.0625rem 0.4rem",
-        "ejemplo_uso": ["chip 'PENDIENTE' en cards", "score ≥80 de operador", "ack inline de mind", "botón LIMPIAR filtros"]
+        "ejemplo_uso": [
+          "chip 'PENDIENTE' en cards",
+          "score ≥80 de operador",
+          "ack inline de mind",
+          "botón LIMPIAR filtros"
+        ]
       }
     },
     "botones": "base (primario/negro/blanco) o color semántico de la acción; NUNCA el verde acento"
@@ -42,16 +57,58 @@
     "radio_input": "0"
   },
   "tipografia": {
-    "titulos": { "familia": "Helvetica Neue", "fallback": ["Arial", "Helvetica", "sans-serif"] },
-    "cuerpo":  { "familia": "PT Serif", "fallback": ["Georgia", "Times New Roman", "serif"] },
+    "titulos": {
+      "familia": "Helvetica Neue",
+      "fallback": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ]
+    },
+    "cuerpo": {
+      "familia": "PT Serif",
+      "fallback": [
+        "Georgia",
+        "Times New Roman",
+        "serif"
+      ]
+    },
     "wordmark": {
       "familia": "Balgin Expanded",
-      "fallback": ["Helvetica Neue", "Arial", "sans-serif"],
+      "fallback": [
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ],
       "archivo_bold": "fonts/balgin/Fontspring-DEMO-balgin-boldexpanded.otf",
       "archivo_regular": "fonts/balgin/Fontspring-DEMO-balgin-regularexpanded.otf",
       "licencia": "Fontspring DEMO (evaluación) — provisional; licenciar Balgin para producción"
     },
-    "tamanos_pt": { "titulo": 22, "h1": 13, "base": 11, "pie": 8 }
+    "tamanos_pt": {
+      "titulo": 22,
+      "h1": 13,
+      "base": 11,
+      "pie": 8
+    },
+    "sistema": {
+      "familia": "IBM Plex Sans",
+      "rol": "UI / texto de sistema de las apps V8 (la voz funcional: ingeniería/sistema). Reemplaza el uso previo. OJO: la Helvetica Condensed es de FXCKBOY (no de V8); el wordmark V8 es Balgin/Extended (no esta).",
+      "fallback": [
+        "Segoe UI",
+        "system-ui",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ],
+      "pesos": {
+        "regular": 400,
+        "medium": 500
+      },
+      "archivo_regular": "fonts/ibm-plex-sans/ibm-plex-sans-400.woff2",
+      "archivo_medium": "fonts/ibm-plex-sans/ibm-plex-sans-500.woff2",
+      "licencia": "SIL OFL 1.1 (libre, embebible en web/Shopify)",
+      "aprobado": "Andy 2026-06-22"
+    }
   },
   "espaciado": {
     "interlineado": "0.8em",
@@ -81,43 +138,43 @@
     "superficie": {
       "$nota": "Capas de superficie: bg = fondo principal, bg_deep = un nivel más profundo (inputs, modales internos), fg = texto primario, fg_mute = secundario, line = bordes/divisores.",
       "dark": {
-        "bg":      "#262b39",
+        "bg": "#262b39",
         "bg_deep": "#1a1d26",
-        "fg":      "#f1f1f1",
+        "fg": "#f1f1f1",
         "fg_mute": "#8a8f9c",
-        "line":    "#3a3f4d"
+        "line": "#3a3f4d"
       },
       "light": {
-        "bg":      "#D9DCE0",
+        "bg": "#D9DCE0",
         "bg_deep": "#C5C9D0",
-        "fg":      "#262b39",
+        "fg": "#262b39",
         "fg_mute": "#5B6371",
-        "line":    "#A6ACB6"
+        "line": "#A6ACB6"
       }
     },
     "accion": {
-      "danger":         "#E11900",
+      "danger": "#E11900",
       "danger_regla": "Reservado EXCLUSIVAMENTE para cancelar/rechazar/eliminar. No usar para errores genéricos ni para 'atención'."
     },
     "estados_kanban": {
       "$nota": "Paleta semántica para la propiedad Estado de tareas/pedidos/operaciones. Inspirada en diseño suizo tipográfico. Cada estado tiene un color de bg pleno; el texto sobre el bg se calcula por contraste (foreground negro o blanco según luminancia).",
-      "borrador":     "#9AA0AC",
-      "sin_empezar":  "#F5D800",
-      "en_progreso":  "#7CC832",
-      "verificar":    "#F08019",
-      "programado":   "#32C8B4",
-      "retrasada":    "#E53019",
-      "terminada":    "#2B9A2B",
-      "cancelada":    "#B0764A"
+      "borrador": "#9AA0AC",
+      "sin_empezar": "#F5D800",
+      "en_progreso": "#7CC832",
+      "verificar": "#F08019",
+      "programado": "#32C8B4",
+      "retrasada": "#E53019",
+      "terminada": "#2B9A2B",
+      "cancelada": "#B0764A"
     },
     "fondo_malla": {
       "$nota": "Sub-paleta DESATURADA INDUSTRIAL para el background mesh (información ambiente, no decoración). Render Canvas2D + Web Worker, regiones de color plano que muestran datasets macroeconómicos. PROHIBIDO usar fuera del fondo malla — sin gradientes, sin glow, sin halo.",
-      "steel":     "#4a5568",
-      "mustard":   "#8a7c4f",
-      "olive":     "#6b7c4f",
-      "slate":     "#5a6478",
-      "sand":      "#8a8775",
-      "charcoal":  "#3a3f4d"
+      "steel": "#4a5568",
+      "mustard": "#8a7c4f",
+      "olive": "#6b7c4f",
+      "slate": "#5a6478",
+      "sand": "#8a8775",
+      "charcoal": "#3a3f4d"
     },
     "como_consumir": {
       "$nota": "Patrón recomendado: definir CSS vars en :root desde estos valores y mapear en tailwind.config.js → colors.v8.<token>. Así toggle dark/light = un solo atributo en <html data-theme>. Ver branding/ux/UX-PATTERNS.md §3.",
