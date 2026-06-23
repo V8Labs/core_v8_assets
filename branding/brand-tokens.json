@@ -102,12 +102,15 @@
       ],
       "pesos": {
         "regular": 400,
-        "medium": 500
+        "medium": 500,
+        "semibold": 600
       },
       "archivo_regular": "fonts/ibm-plex-sans/ibm-plex-sans-400.woff2",
       "archivo_medium": "fonts/ibm-plex-sans/ibm-plex-sans-500.woff2",
       "licencia": "SIL OFL 1.1 (libre, embebible en web/Shopify)",
-      "aprobado": "Andy 2026-06-22"
+      "aprobado": "Andy 2026-06-22",
+      "archivo_semibold": "fonts/ibm-plex-sans/ibm-plex-sans-600.woff2",
+      "uso": "títulos t1/t2/t3 → 600 (semibold) · cuerpo p1/p2 → 400 · p3 → 500 · cursiva .v8-em → italic 400. (estándar app, bendecido branding 2026-06-22)"
     }
   },
   "espaciado": {
