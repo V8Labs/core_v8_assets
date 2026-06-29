@@ -11,10 +11,18 @@
   (decisión Andy 2026-06-28 — NO símbolos propios). El nombre ES el logo:
   - **Logo en header/login/splash:** el **wordmark "V8 <Nombre>"** (Balgin, blanco sobre fondo V8
     #262b39) — ej. `wordmark-v8metrics-blanco.svg`. Consumir el SVG, no dibujar texto.
-  - **Ícono cuadrado (home-screen PWA):** **monograma de la inicial** (letra en Balgin, blanco sobre
-    #262b39) — ej. `app-icons/metrics-pwa-icon-interim-512.png` ("M"); Boletín → "B"; etc.
-  - **Sin símbolo gráfico** por ahora — el sistema es nombre + monograma-letra. (Si a futuro se quiere
-    un símbolo, branding propone y Andy aprueba; hoy NO.)
+  - **Ícono cuadrado (home-screen PWA) = la PALABRA de la app** (Andy 2026-06-29; supersede el
+    monograma-inicial). Receta CANÓNICA (generador `core_v8_brand/scripts/app-icon.py`, mismo trato
+    que el ícono "V8" de notifications):
+    - Balgin Expanded **BOLD** · texto **blanco #FFFFFF** sobre **#262b39** · cuadrado · palabra
+      centrada (H+V) · **proporción NATURAL del font** (no deformar / no textLength) · font-size tal
+      que el ancho natural ocupe **~75%** del cuadro (any) / **~60%** (maskable, safe-area 10-12%).
+    - Salidas: SVG vectorizado + PNG 512(any) · 512(maskable) · 192 · 180(apple-touch).
+    - Ej.: `app-icons/metrics/metrics-icon-*`, `app-icons/boletin/boletin-icon-*`.
+    - ⚠️ Balgin DEMO no trae acentuadas (í/é…) → el render normaliza ("Boletín"→"Boletin"); la tilde
+      requiere la Balgin licenciada.
+  - **Sin símbolo gráfico** — el sistema es la palabra (wordmark + ícono-palabra). (Símbolo propio:
+    branding propone y Andy aprueba; hoy NO.)
 
 ## 2. Tamaños límite (logomanía) — por contexto de uso
 | Uso | Tamaño (alto) | Nota |
