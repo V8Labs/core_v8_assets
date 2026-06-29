@@ -7,13 +7,14 @@
 ## 1. Estrategia de logo por app (jerarquía del ecosistema)
 - **App insignia = V8 Notifications:** lleva el nombre **V8** (es el punto clave del negocio: conectar
   talentos / ecosistema). Tiene ícono propio.
-- **Apps secundarias** (Metrics, Boletín, Studio, Fashion, Dialogue…): por ahora, **INTERIM**:
+- **Apps secundarias** (Metrics, Boletín, Studio, Fashion, Dialogue…): **SOLO LETRAS / nombre**
+  (decisión Andy 2026-06-28 — NO símbolos propios). El nombre ES el logo:
   - **Logo en header/login/splash:** el **wordmark "V8 <Nombre>"** (Balgin, blanco sobre fondo V8
     #262b39) — ej. `wordmark-v8metrics-blanco.svg`. Consumir el SVG, no dibujar texto.
-  - **Ícono cuadrado (home-screen PWA):** **monograma interino** (la inicial en Balgin, blanco sobre
-    #262b39) hasta definir símbolo propio — ej. `app-icons/metrics-pwa-icon-interim-512.png`.
-  - **Símbolo propio:** se diseña por app cuando se priorice (geométrico, estilo V8: rectas, trazo
-    ~2px, sin bézier salvo círculo real, radius 0, lima solo destello). branding propone, Andy aprueba.
+  - **Ícono cuadrado (home-screen PWA):** **monograma de la inicial** (letra en Balgin, blanco sobre
+    #262b39) — ej. `app-icons/metrics-pwa-icon-interim-512.png` ("M"); Boletín → "B"; etc.
+  - **Sin símbolo gráfico** por ahora — el sistema es nombre + monograma-letra. (Si a futuro se quiere
+    un símbolo, branding propone y Andy aprueba; hoy NO.)
 
 ## 2. Tamaños límite (logomanía) — por contexto de uso
 | Uso | Tamaño (alto) | Nota |
@@ -41,16 +42,20 @@
 | Párrafo (body) | 400 | 14–16 px | texto corrido |
 | Utility / label | 500 | 11–13 px | labels, ejes, captions |
 
-**Estado "EN VIVO / ATENCIÓN"** (el patrón de Notifications, codificado al canon):
-- El destaque lo da **el acento lima `#A2E771` como DESTELLO, nunca relleno de superficie**:
-  livedot, micro-label en lima, o subrayado/borde fino lima.
-- Fondo oscuro (#262b39): texto base `#f1f1f1` + **acento lima** (dot/label/underline).
-- Fondo claro (#D9DCE0): texto base `#262b39` + **acento lima** (o el azul-grafito como realce).
-- ⚠️ A CONFIRMAR con notifications: la receta exacta del "texto verde sobre realce" que describe Andy
-  (¿lima como TEXTO del micro-label? ¿pill con borde lima?) → codificar la versión final acá tras ver
-  `app_V8_NOTIFICATIONS/src/index.css`. Regla dura mientras tanto: lima jamás como relleno de área.
+**Estado "EN VIVO / ATENCIÓN"** — receta CANÓNICA (leída de `app_V8_NOTIFICATIONS/src/index.css`,
+clases `.v8-accent-chip` / `.v8-accent-soft`). El destaque lo da el **acento lima `#A2E771` como
+DESTELLO, nunca relleno de área**:
+- **Fondo CLARO (light):** **pill oscuro `#262b39`** (token `--v8-accent-on`) **+ texto lima `#A2E771`**.
+  (= "si el fondo es blanco, el fondo de la letra va azul-grafito con la letra verde".)
+- **Fondo OSCURO (dark):** **texto lima `#A2E771`** solo, **sin pill** (`--v8-accent-on` es no-op en dark).
+- **Pulso de atención** (algo llega/sucede ahora): keyframe con lima a baja opacidad — `bg rgb(accent/0.16)`,
+  `border rgb(accent/0.7)`, `border-left rgb(accent/0.9)`. Un parpadeo sutil, no un relleno.
+- Variante suave: `.v8-accent-soft` (texto lima, sin chip).
+- Tokens a consumir: `--v8-accent` (#A2E771) y `--v8-accent-on` (#262b39). Misma clase para TODAS las
+  apps (Metrics, Boletín…) → coherencia del "en vivo" en el ecosistema.
 
-## 4. Pendiente / plan
-- Confirmar receta exacta del estado "en vivo" con notifications (ver index.css) → cerrar §3.
-- Diseñar símbolos propios por app cuando se prioricen (3 propuestas Metrics ya enviadas).
-- Review por-marca (`core_v8_brand/scripts/brand-audit.py`) corriendo desde branding (diseno/0007).
+## 4. Estado
+- ✅ Estado "en vivo" codificado (§3) desde el código real de Notifications.
+- ✅ Apps secundarias = SOLO LETRAS (sin símbolos propios) — decisión Andy 2026-06-28.
+- ✅ Review por-marca (`core_v8_brand/scripts/brand-audit.py`) corriendo desde branding (diseno/0007).
+- Cada app aplica esta doctrina por su cuenta (auto-aplicación); branding arbitra por excepción.
