@@ -62,8 +62,8 @@ vb_h = (yMax - yMin) + 2 * PAD
 # transform: font(Y-up) -> SVG(Y-down), con padding
 transform = (f"translate({PAD - xMin:.2f},{PAD + yMax:.2f}) scale(1,-1)")
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vb_w:.0f} {vb_h:.0f}" role="img" aria-label="V8{name}">
-  <!-- Wordmark V8{name}. V8=Balgin Expanded Bold, {name}=Balgin Expanded Regular.
+svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vb_w:.0f} {vb_h:.0f}" role="img" aria-label="V8 {name}">
+  <!-- Wordmark V8 {name}. V8=Balgin Expanded Bold, {name}=Balgin Expanded Regular.
        Vectorizado a paths. Color {FILL}. Generado por branding/wordmarks/_generate.py. -->
   <g transform="{transform}" fill="{FILL}"><path d="{path_d}"/></g>
 </svg>
