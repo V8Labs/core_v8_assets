@@ -17,8 +17,13 @@
     - Balgin Expanded **BOLD** · texto **blanco #FFFFFF** sobre **#262b39** · cuadrado · palabra
       centrada (H+V) · **proporción NATURAL del font** (no deformar / no textLength) · font-size tal
       que el ancho natural ocupe **~75%** del cuadro (any) / **~60%** (maskable, safe-area 10-12%).
-    - Salidas: SVG vectorizado + PNG 512(any) · 512(maskable) · 192 · 180(apple-touch).
-    - Ej.: `app-icons/metrics/metrics-icon-*`, `app-icons/boletin/boletin-icon-*`.
+    - Salidas: SVG vectorizado + PNG **1024(master)** · 512(any) · 512(maskable) · 192 · 180(apple-touch).
+    - Ej.: `app-icons/metrics/metrics-icon-*`, `app-icons/boletin/boletin-icon-*`,
+      `app-icons/studio/studio-icon-*`.
+    - ⚠️ El fondo va **SÓLIDO** (#262b39), nunca transparente: iOS no respeta alpha en
+      `apple-touch-icon` y el redondeo de esquina lo dibuja el sistema — no lo dibujes vos.
+    - 🗑️ **Deprecado el monograma-inicial** (`pwa/studio-st.*` = "St"): lo supersede la palabra
+      literal. No consumir esos archivos.
     - ⚠️ Balgin DEMO no trae acentuadas (í/é…) → el render normaliza ("Boletín"→"Boletin"); la tilde
       requiere la Balgin licenciada.
   - **Sin símbolo gráfico** — el sistema es la palabra (wordmark + ícono-palabra). (Símbolo propio:
