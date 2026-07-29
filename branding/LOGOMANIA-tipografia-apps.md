@@ -68,9 +68,13 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
     ícono de Boletin.app no sobrevivía a 48px): el ícono lo arma el **lockup de dos líneas**, no
     la palabra suelta — el apilado le da ~2,4× más altura de letra en el mismo cuadro, y es lo
     único que se lee en la home screen. Generador: `core_v8_brand/scripts/app-icon-lockup.py`.
-    - El lockup se escala hasta **TOCAR el círculo** de 94% del lado (any) / **80%** (maskable,
-      la zona que Android garantiza) — no contra el cuadrado. Se descuenta el PAD del viewBox
-      del lockup: si no, ese aire se suma al margen y el ícono queda chico y flotando.
+    - **La medida es 80% — una sola, para todas las salidas** (Andy 2026-07-29, elegida sobre
+      una prueba a tamaño físico real de 80/88/94/100%). El lockup se escala hasta **TOCAR el
+      círculo** de ese 80% del lado — el que Android garantiza bajo su máscara — no contra el
+      cuadrado. Consecuencia buscada: el ícono normal y el maskable son **el mismo dibujo**, no
+      hay dos versiones que se desincronicen (un solo archivo puede ir con `purpose:"any maskable"`).
+      Se descuenta el PAD del viewBox del lockup: si no, ese aire se suma al margen y el ícono
+      queda chico y flotando.
     - **Sin contorno.** A 48px el trazo oscuro cierra los huecos de la "o" y la "p" y el ícono
       se vuelve mancha. El contorno es para tamaños grandes, no para el ícono.
     - Fondo sólido y **sin esquinas redondeadas propias** (las dibuja el sistema).
