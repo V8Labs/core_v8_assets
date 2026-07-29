@@ -4,13 +4,32 @@
 > cada app, **tamaños límite** por contexto, y el **stylism tipográfico** (escala + estados).
 > SSOT de consumo: `brand-tokens.json` + este doc. Gobierna diseno/0007 (branding = dueño del estándar).
 
+## 0. Nombre de las apps — el prefijo V8 (decisión Andy 2026-07-27)
+
+**El prefijo "V8" NO se usa en el nombre de las apps. Queda reservado a UNA sola.**
+
+- **App de entrada a la gestión = "V8 Labs"** — es la que hoy se llama *Notifications*. Se
+  renombra a **V8 Labs** y es la ÚNICA que lleva V8 en el nombre. Es la puerta al ecosistema:
+  por eso carga la marca de la casa.
+- **Todas las demás van con su nombre pelado:** **Metrics · Studio · POS · Boletín · Fashion ·
+  Dialogue · Media · Rooms · Lounge · Ecommerce**. Sin "V8" adelante, en ningún lado visible.
+
+**Dónde aplica (nombre VISIBLE):** `manifest.webmanifest` (`name` y `short_name` — es el nombre
+con que la PWA se **graba** en la pantalla de inicio), `<title>` del HTML, wordmark del
+header/login/splash, ícono, y cualquier rótulo de la app hacia el usuario.
+
+**Dónde NO aplica:** los repos y carpetas siguen llamándose `app_V8_*`, y los `.agent-name`,
+alias de comms y remotes de GitHub **no se tocan** (Andy 2026-07-27: renombrarlos rompería
+comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie).
+
 ## 1. Estrategia de logo por app (jerarquía del ecosistema)
-- **App insignia = V8 Notifications:** lleva el nombre **V8** (es el punto clave del negocio: conectar
-  talentos / ecosistema). Tiene ícono propio.
-- **Apps secundarias** (Metrics, Boletín, Studio, Fashion, Dialogue…): **SOLO LETRAS / nombre**
+- **App insignia = V8 Labs** (ex-Notifications): lleva el nombre **V8** (es el punto clave del
+  negocio: conectar talentos / ecosistema; y es la entrada a la gestión). Tiene ícono propio.
+- **Apps secundarias** (Metrics, Boletín, Studio, POS, Fashion, Dialogue…): **SOLO LETRAS / nombre**
   (decisión Andy 2026-06-28 — NO símbolos propios). El nombre ES el logo:
-  - **Logo en header/login/splash:** el **wordmark "V8 <Nombre>"** (Balgin, blanco sobre fondo V8
-    #262b39) — ej. `wordmark-v8metrics-blanco.svg`. Consumir el SVG, no dibujar texto.
+  - **Logo en header/login/splash:** el **wordmark con el nombre PELADO** (Balgin, blanco sobre
+    fondo V8 #262b39) — ej. `wordmark-metrics-blanco.svg`. Consumir el SVG, no dibujar texto.
+    ⚠️ Los wordmarks viejos con prefijo (`wordmark-v8metrics-*`) quedan **deprecados** por §0.
   - **Ícono cuadrado (home-screen PWA) = la PALABRA de la app** (Andy 2026-06-29; supersede el
     monograma-inicial). Receta CANÓNICA (generador `core_v8_brand/scripts/app-icon.py`, mismo trato
     que el ícono "V8" de notifications):
@@ -28,6 +47,28 @@
       requiere la Balgin licenciada.
   - **Sin símbolo gráfico** — el sistema es la palabra (wordmark + ícono-palabra). (Símbolo propio:
     branding propone y Andy aprueba; hoy NO.)
+  - **Variante "cara pública" con dominio** (Andy 2026-07-27, primer caso: Boletin.app): para
+    landing / redes / firma / splash, el nombre puede armarse como **lockup de DOS LÍNEAS
+    apiladas y justificadas al mismo ancho** — nombre arriba, `.app` abajo **escalado hasta
+    igualar EXACTAMENTE el ancho de la línea de arriba** (ambos bordes coinciden). Las dos
+    líneas en Balgin Expanded Bold. Generador: `core_v8_brand/scripts/boletin-app-lockup.py`.
+    Assets: `wordmark-boletin-app[-blanco].svg`. El header/nav interno sigue usando el
+    wordmark de UNA línea.
+    ⚠️ En esta variante el nombre va **sin tilde** por ser un dominio (boletin.app), no por
+    la limitación de la Balgin DEMO.
+  - **Ícono de app CUANDO la app tiene lockup con dominio** (Andy 2026-07-28, a raíz de que el
+    ícono de Boletin.app no sobrevivía a 48px): el ícono lo arma el **lockup de dos líneas**, no
+    la palabra suelta — el apilado le da ~2,4× más altura de letra en el mismo cuadro, y es lo
+    único que se lee en la home screen. Generador: `core_v8_brand/scripts/app-icon-lockup.py`.
+    - El lockup se escala hasta **TOCAR el círculo** de 94% del lado (any) / **80%** (maskable,
+      la zona que Android garantiza) — no contra el cuadrado. Se descuenta el PAD del viewBox
+      del lockup: si no, ese aire se suma al margen y el ícono queda chico y flotando.
+    - **Sin contorno.** A 48px el trazo oscuro cierra los huecos de la "o" y la "p" y el ícono
+      se vuelve mancha. El contorno es para tamaños grandes, no para el ícono.
+    - Fondo sólido y **sin esquinas redondeadas propias** (las dibuja el sistema).
+    - Ej.: `app-icons/boletin/boletin-app-icon-*` (crema #E2DBD2 / oro #CFA230, elegido por Andy).
+    - 🗑️ Queda fuera de uso como ícono `boletin-app-avatar-oro-1024.png` (era un avatar de
+      perfil, apaisado y con aire muerto arriba y abajo); sigue sirviendo de foto de perfil.
 
 ## 2. Tamaños límite (logomanía) — por contexto de uso
 | Uso | Tamaño (alto) | Nota |
@@ -68,6 +109,8 @@ DESTELLO, nunca relleno de área**:
   apps (Metrics, Boletín…) → coherencia del "en vivo" en el ecosistema.
 
 ## 4. Estado
+- ✅ Nombre sin prefijo V8 en todas las apps salvo **V8 Labs** (ex-Notifications) — Andy 2026-07-27.
+  Pendiente de aplicación por cada app: manifest, title, wordmark, ícono.
 - ✅ Estado "en vivo" codificado (§3) desde el código real de Notifications.
 - ✅ Apps secundarias = SOLO LETRAS (sin símbolos propios) — decisión Andy 2026-06-28.
 - ✅ Review por-marca (`core_v8_brand/scripts/brand-audit.py`) corriendo desde branding (diseno/0007).
