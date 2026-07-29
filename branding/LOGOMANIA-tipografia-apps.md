@@ -52,8 +52,16 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
     apiladas y justificadas al mismo ancho** — nombre arriba, `.app` abajo **escalado hasta
     igualar EXACTAMENTE el ancho de la línea de arriba** (ambos bordes coinciden). Las dos
     líneas en Balgin Expanded Bold. Generador: `core_v8_brand/scripts/boletin-app-lockup.py`.
-    Assets: `wordmark-boletin-app[-blanco].svg`. El header/nav interno sigue usando el
-    wordmark de UNA línea.
+    Assets: `wordmark-boletin-app[-blanco].svg`.
+    - **Variante HORIZONTAL (una sola línea) — la que usa la app** (Andy 2026-07-28):
+      `wordmark-boletin-app-horizontal[-blanco].svg`, "Boletin.app" corrido en Balgin Expanded
+      Bold. Es el logo de header/nav/login de la app: a 28px de alto se lee limpio, y el
+      apilado a esa altura no (cada línea quedaría en 12px). Generador: el canónico
+      `branding/wordmarks/_generate.py "Boletin.app" [dark|blanco]` — el punto es un glifo más,
+      no necesita tratamiento aparte.
+    - Reparto entre las tres: **apilado** = cara pública (landing, redes, firma, splash) ·
+      **horizontal** = dentro de la app · **`wordmark-boletin[-blanco].svg`** (nombre pelado,
+      sin dominio) = cuando el contexto ya dice que es Boletín y el `.app` sobra.
     ⚠️ En esta variante el nombre va **sin tilde** por ser un dominio (boletin.app), no por
     la limitación de la Balgin DEMO.
   - **Ícono de app CUANDO la app tiene lockup con dominio** (Andy 2026-07-28, a raíz de que el
