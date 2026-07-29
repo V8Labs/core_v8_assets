@@ -66,7 +66,11 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
     - **Sin contorno.** A 48px el trazo oscuro cierra los huecos de la "o" y la "p" y el ícono
       se vuelve mancha. El contorno es para tamaños grandes, no para el ícono.
     - Fondo sólido y **sin esquinas redondeadas propias** (las dibuja el sistema).
-    - Ej.: `app-icons/boletin/boletin-app-icon-*` (crema #E2DBD2 / oro #CFA230, elegido por Andy).
+    - **Paleta = la del sistema V8**: blanco #FFFFFF sobre #262b39, igual que el ícono-palabra
+      (Andy 2026-07-28). El ícono de app es superficie de ecosistema, no de la marca suelta:
+      en la home screen las apps V8 se reconocen entre sí por el fondo. La paleta propia de la
+      app (ej. crema/oro de Boletín) vive en el logo y en la foto de perfil, no acá.
+    - Ej.: `app-icons/boletin/boletin-app-icon-*`.
     - 🗑️ Queda fuera de uso como ícono `boletin-app-avatar-oro-1024.png` (era un avatar de
       perfil, apaisado y con aire muerto arriba y abajo); sigue sirviendo de foto de perfil.
 
