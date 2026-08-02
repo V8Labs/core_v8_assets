@@ -41,8 +41,13 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
       `app-icons/studio/studio-icon-*`.
     - ⚠️ El fondo va **SÓLIDO** (#262b39), nunca transparente: iOS no respeta alpha en
       `apple-touch-icon` y el redondeo de esquina lo dibuja el sistema — no lo dibujes vos.
-    - 🗑️ **Deprecado el monograma-inicial** (`pwa/studio-st.*` = "St"): lo supersede la palabra
-      literal. No consumir esos archivos.
+    - 🗑️ **Deprecado el monograma-inicial COMO ÍCONO DE HOME-SCREEN** (`pwa/studio-st.*` = "St"):
+      lo supersede la palabra literal. No consumir esos archivos.
+      ⚠️ **Alcance de la deprecación (ratificado lord 2026-08-02, caso Dialogue):** el monograma
+      muere SOLO como ícono de home/avatar de app. **SIGUE VIGENTE como FAVICON de pestaña**
+      (`branding/favicons/<app>.svg` — inicial + punto verde `acento`): a 16–32px la palabra
+      completa es ilegible y el monograma es la única marca que sobrevive. Dos superficies, dos
+      reglas: home-screen = palabra · pestaña = monograma.
     - ⚠️ Balgin DEMO no trae acentuadas (í/é…) → el render normaliza ("Boletín"→"Boletin"); la tilde
       requiere la Balgin licenciada.
   - **Sin símbolo gráfico** — el sistema es la palabra (wordmark + ícono-palabra). (Símbolo propio:
