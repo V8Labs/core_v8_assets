@@ -155,6 +155,11 @@
         "line": "#A6ACB6"
       }
     },
+    "acento": {
+      "$nota": "Acento de UI por tema (caso real: boletin.app tema claro, 2026-08-02). En DARK el lima canónico #A2E771 funciona como texto/línea fina (9.55:1 sobre bg). En LIGHT el lima puro es invisible como texto (1.07:1 sobre bg) → NO se usa como texto/línea; para chips/badges va el patrón pill-invertido (color_uso.acento.resolucion_light), y para TEXTO fino acentuado (eyebrows, numeración, destellos tipográficos) va light_texto: mismo matiz lima oscurecido hasta AA sobre AMBAS superficies claras (5.82:1 sobre bg #D9DCE0, 4.82:1 sobre bg_deep #C5C9D0 — un valor que solo pase sobre bg se cae en inputs/modales).",
+      "dark": "#A2E771",
+      "light_texto": "#355A10"
+    },
     "accion": {
       "danger": "#E11900",
       "danger_regla": "Reservado EXCLUSIVAMENTE para cancelar/rechazar/eliminar. No usar para errores genéricos ni para 'atención'."
