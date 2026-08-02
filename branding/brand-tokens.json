@@ -164,6 +164,16 @@
       "danger": "#E11900",
       "danger_regla": "Reservado EXCLUSIVAMENTE para cancelar/rechazar/eliminar. No usar para errores genéricos ni para 'atención'."
     },
+    "departamentos": {
+      "$nota": "Mapa CANÓNICO depto→color (bendecido branding 2026-08-02; nació provisional en Metrix). Hexes = directorio Notion canónico (notionColors.ts de notifications) para que Notion y las apps pinten igual. Consumidores: Metrix (kanban salud), Roadmap (7 columnas), y toda app que columnee por depto. Texto sobre estos bg: #161616. Ojo: marrón coincide con estados_kanban.retrasada — ejes distintos (depto vs estado), no conviven en el mismo elemento.",
+      "ops": "#3D7CD6",
+      "ventas": "#3FBE83",
+      "mercadeo": "#FCE302",
+      "diseno": "#8E6BD4",
+      "producto": "#F2872E",
+      "administracion": "#9AA0AC",
+      "logistica": "#B0764A"
+    },
     "estados_kanban": {
       "$nota": "Paleta semántica para la propiedad Estado de tareas/pedidos/operaciones. Inspirada en diseño suizo tipográfico. Cada estado tiene un color de bg pleno; el texto sobre el bg se calcula por contraste (foreground negro o blanco según luminancia).",
       "borrador": "#9AA0AC",
