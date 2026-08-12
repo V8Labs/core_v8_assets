@@ -36,6 +36,12 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
     - Balgin Expanded **BOLD** · texto **blanco #FFFFFF** sobre **#262b39** · cuadrado · palabra
       centrada (H+V) · **proporción NATURAL del font** (no deformar / no textLength) · font-size tal
       que el ancho natural ocupe **~75%** del cuadro (any) / **~60%** (maskable, safe-area 10-12%).
+    - **NOMBRES CORTOS (2–3 letras) bajan a `--frac 0.66`** (branding 2026-08-11, caso XO). El
+      porcentaje es de ANCHO, así que a igual porcentaje un nombre corto da letras MUCHO más altas
+      que uno largo (XO al 75% = 240px de letra sobre 1024; Dialogue = 125px) y el cuadro queda
+      pesado. 0.66 deja **17% de margen lateral**, en línea con el aire que Andy pidió para los
+      íconos PWA (2026-08-09). El maskable sigue al **80% de ese valor** — es la proporción de la
+      receta, no un número suelto. Flag en `app-icon.py`; **default 0.75 intacto** para los demás.
     - Salidas: SVG vectorizado + PNG **1024(master)** · 512(any) · 512(maskable) · 192 · 180(apple-touch).
     - Ej.: `app-icons/metrics/metrics-icon-*`, `app-icons/boletin/boletin-icon-*`,
       `app-icons/studio/studio-icon-*`.
@@ -46,7 +52,13 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
       ⚠️ **Alcance de la deprecación (ratificado lord 2026-08-02, caso Dialogue):** el monograma
       muere SOLO como ícono de home/avatar de app. **SIGUE VIGENTE como FAVICON de pestaña**
       (`branding/favicons/<app>.svg` — inicial + punto verde `acento`): a 16–32px la palabra
-      completa es ilegible y el monograma es la única marca que sobrevive. Dos superficies, dos
+      completa es ilegible y el monograma es la única marca que sobrevive.
+      ✅ **Excepción por convergencia — nombres de 2 letras (branding 2026-08-11, caso XO):** cuando
+      el nombre YA es de dos letras, el ícono-palabra y el monograma son **el mismo dibujo**, así que
+      la app NO necesita dos marcas: el favicon lleva la palabra entera (`favicons/xo.svg`, con el
+      punto verde de familia) y se lee limpio a 32px. La regla de dos superficies existe porque las
+      palabras largas mueren a 16px — un nombre de dos letras no muere, y no hay nada que resolver.
+      Dos superficies, dos
       reglas: home-screen = palabra · pestaña = monograma.
     - ⚠️ Balgin DEMO no trae acentuadas (í/é…) → el render normaliza ("Boletín"→"Boletin"); la tilde
       requiere la Balgin licenciada.

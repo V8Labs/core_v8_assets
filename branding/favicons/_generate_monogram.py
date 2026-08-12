@@ -59,14 +59,14 @@ tx, ty = (CANVAS - dw) / 2, (CANVAS - dh) / 2
 transform = (f"translate({tx:.2f},{ty:.2f}) scale({scale:.5f},{-scale:.5f}) "
              f"translate({-xMin:.2f},{-yMax:.2f})")
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CANVAS} {CANVAS}" role="img" aria-label="V8 {app}">
-  <!-- Favicon monograma V8 {app}. Inicial "{initial}" Balgin Bold vectorizada.
+svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CANVAS} {CANVAS}" role="img" aria-label="{app}">
+  <!-- Favicon monograma {app}. Inicial "{initial}" Balgin Bold vectorizada.
        Fondo {BG}, inicial {FG}, punto {ACENTO} (acento de familia). Generado por _generate_monogram.py. -->
   <rect width="{CANVAS}" height="{CANVAS}" fill="{BG}"/>
   <g transform="{transform}" fill="{FG}"><path d="{path_d}"/></g>
   <circle cx="{CANVAS-11}" cy="{CANVAS-11}" r="4" fill="{ACENTO}"/>
 </svg>
 '''
-out = os.path.join(HERE, f"{app}.svg")
+out = os.path.join(HERE, f"{app.lower()}.svg")   # archivo siempre kebab/lower; la etiqueta conserva el nombre visible
 open(out, "w").write(svg)
 print(f"OK -> {out}  (inicial '{initial}', scale {scale:.3f})")
