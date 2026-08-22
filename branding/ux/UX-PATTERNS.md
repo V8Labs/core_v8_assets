@@ -30,8 +30,8 @@ Si solo tenés 30s, llevate esto:
 
 1. **Consumí tokens del SSOT**, no inventes valores. Repo:
    `V8Labs/core_v8_assets/branding/brand-tokens.json` + `BRANDING.md`.
-2. **Helvetica Condensed** (con fallbacks), **3 pesos**, mayúsculas con tracking
-   generoso en metadata.
+2. **IBM Plex Sans** (con fallbacks), **3 pesos** (400/500/600), mayúsculas con
+   tracking generoso en metadata. (La Helvetica Condensed es de FXCKBOY — §4.)
 3. **Radius ≤ 3px** en TODO. Sin gradients. Sin shadows. Sin glow. Sin
    glassmorphism. Sin neón.
 4. **bg primario** `#262b39`, **fg primario** `#f1f1f1`, **destructivo** `#E11900`
@@ -129,14 +129,22 @@ duros**, no píldoras redondeadas.
 
 ## 4. Tipografía
 
-**Familia única:** Helvetica Condensed con fallbacks.
+**Familia única: IBM Plex Sans** (aprobada por Andy 2026-06-22, SIL OFL — libre y embebible).
+Es la voz funcional del sistema: ingeniería, no moda.
 
 ```css
-font-family: "Helvetica Neue Condensed", "Helvetica Neue", Helvetica,
-             "Inter Condensed", Inter, system-ui, sans-serif;
+font-family: "IBM Plex Sans", "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
 ```
 
-**Pesos:** Light / Regular / Bold (3, no más).
+> ⚠️ **Corregido 2026-08-22 (branding).** Esta sección decía **Helvetica Condensed** y estaba
+> **MAL**: la Helvetica Condensed es de **FXCKBOY**, no de V8 — mezclarla acá le pone a una app
+> interna la cara de la marca de producto. El dato correcto vive en `brand-tokens.json →
+> tipografia.sistema` desde el 2026-06-22; este doc (01-06) quedó tres semanas atrás y nadie lo
+> alcanzó. Si un agente leyó "Helvetica Condensed" acá y la cableó, **la fuente es lo primero que
+> hay que cambiar.** Fuente de verdad: los tokens, siempre — este doc los explica, no los define.
+
+**Pesos:** Regular 400 / Medium 500 / Semibold 600 (3, no más).
+Títulos t1-t3 → 600 · cuerpo p1-p2 → 400 · p3 → 500.
 
 **Escala** (Tailwind `text-*`):
 
