@@ -9,6 +9,31 @@
 > **Dueño:** `branding`. Esto NO redefine nada: baja `brand-tokens.json` + `UX-PATTERNS.md` a un
 > caso de uso. Ante cualquier diferencia, **manda el token**, no este doc.
 
+## 0. Qué hereda una superficie que NO es una página (aclarado 2026-08-22, lo trajo `barcode`)
+
+Este doc está escrito desde una **página del flujo**. Un `<dialog>` suelto no tiene encabezado de
+referencia+paso, así que **§3 (anchos y línea temporal) y §4 (barra superior sticky) no le
+aplican**. Lo que hereda **toda** superficie de la app, sea página o diálogo:
+
+**§1 tokens · §2 las tres trampas · tipografía · piso de 44px de toque · piso de 12px en texto de
+ayuda.** Ese es el núcleo; el resto es del formato página.
+
+**Dos pisos que se miden mal seguido:**
+- **44px es el ÁREA QUE SE TOCA**, no la fila que la contiene. Una fila de 44px con un botón de
+  38px adentro **no cumple** — el dedo toca el botón, no la fila.
+- **No apiles `opacity` sobre `--v8-fg-mute`.** Ese token ya está en el mínimo AA (4.36:1); con
+  `opacity:.6` cae a **2.5:1**. Y el texto deshabilitado suele ser justamente el que explica por
+  qué algo no se puede hacer — o sea el que más hay que poder leer.
+
+**Toda acción irreversible necesita una VÍA DE ESCAPE, y salir no es "otro botón de acción".**
+Si la superficie dispara algo físico (imprime, corta, despacha), tiene que haber cómo salir sin
+ejecutarla: una **X en el encabezado**, o un `<dialog>` real (ESC + backdrop). Eso no compite con
+el botón de acción ni contradice la regla de los dos botones — la puerta no es una acción.
+
+**Una confirmación nunca vive en el píxel del disparador.** Reusar el mismo botón cambiándole el
+texto ("¿seguro?") se anula solo: un doble-tap —el gesto de alguien apurado y con guantes— entra
+en confirmación y confirma sin que nadie lea. La confirmación va en otro elemento u otro target.
+
 ---
 
 ## 1. El bloque de tokens — copiar TAL CUAL, no adaptar
@@ -140,7 +165,10 @@ teléfono. Si un nombre real no entra, se abrevia (`En muestra` → `Muestra`), 
 por otra palabra. El costo de un rótulo apretado es un rótulo apretado; el costo de un rótulo
 inventado es una conversación que no cierra.
 
-**c) El modal de impresión: no lo expliques, estructurálo.** La frase "cambiar esto no altera ese
+**c) El modal de impresión: no lo expliques, estructurálo.** ⚠️ **Por TALLA, no un número
+agregado** (corregido 2026-08-22, lo trajo `barcode`): el caso real es reimprimir los tags de UNA
+talla, y un total único no sirve para eso. Va una fila por talla — `Producidas · N` de sólo
+lectura + su propio campo editable. La frase "cambiar esto no altera ese
 dato" es correcta y aun así frágil — está en el color más tenue y en 11.5px, o sea justo donde
 nadie mira. La distinción se resuelve con **jerarquía, no con una aclaración**: poné
 `Producidas · 24` como una fila más del bloque de sólo-lectura (mono, alineada con las otras), y
