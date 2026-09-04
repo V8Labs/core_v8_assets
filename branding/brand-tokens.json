@@ -198,6 +198,81 @@
       "$nota": "Patrón recomendado: definir CSS vars en :root desde estos valores y mapear en tailwind.config.js → colors.v8.<token>. Así toggle dark/light = un solo atributo en <html data-theme>. Ver branding/ux/UX-PATTERNS.md §3.",
       "tailwind_referencia": "V8Labs/app_V8_NOTIFICATIONS/tailwind.config.js",
       "css_vars_referencia": "V8Labs/app_V8_NOTIFICATIONS/src/index.css"
+    },
+    "roles": {
+      "$nota": "Identidad por ROL de usuario para boletin.app (branding 2026-09-03, encargo de Andy vía boletin, V8-RMP-212). Ojo con el eje: estos 6 juegos son por ROL y aplican a la superficie de ADENTRO, donde ya hay sesión. El ÍCONO del lanzador NO sale de acá — se resuelve al instalar la PWA, cuando todavía no hay sesión, así que va por HOST (pos./apex/drop.). Medidos con core_v8_brand/scripts/contrast-check.py: los 9 tokens pasan AA contra bg Y contra bg_deep. Un valor que solo pase sobre bg se cae en inputs y modales.",
+      "interno": {
+        "dark": {
+          "bg": "#262b39",
+          "bg_deep": "#1a1d26",
+          "fg": "#f1f1f1",
+          "fg_mute": "#8E939F",
+          "line": "#3a3f4d",
+          "accent": "#A2E771",
+          "accent_on": "#163309",
+          "warn": "#E5A93B",
+          "danger": "#FF6B58"
+        },
+        "light": {
+          "bg": "#D9DCE0",
+          "bg_deep": "#C5C9D0",
+          "fg": "#262b39",
+          "fg_mute": "#4E5460",
+          "line": "#A6ACB6",
+          "accent": "#355A10",
+          "accent_on": "#F1F1F1",
+          "warn": "#6F4E00",
+          "danger": "#A81309"
+        }
+      },
+      "retailer": {
+        "dark": {
+          "bg": "#1F1F21",
+          "bg_deep": "#141416",
+          "fg": "#F2F2F4",
+          "fg_mute": "#9C9CA3",
+          "line": "#3A3A3E",
+          "accent": "#C8CCD2",
+          "accent_on": "#1F1F21",
+          "warn": "#E5A93B",
+          "danger": "#FF6B58"
+        },
+        "light": {
+          "bg": "#E4E5E7",
+          "bg_deep": "#D2D4D7",
+          "fg": "#1F1F21",
+          "fg_mute": "#56585E",
+          "line": "#B0B2B7",
+          "accent": "#33363B",
+          "accent_on": "#F2F2F4",
+          "warn": "#6F4E00",
+          "danger": "#A81309"
+        }
+      },
+      "dropshipper": {
+        "dark": {
+          "bg": "#17150F",
+          "bg_deep": "#0E0D09",
+          "fg": "#F5F1E8",
+          "fg_mute": "#A39A88",
+          "line": "#38332A",
+          "accent": "#D4AF37",
+          "accent_on": "#17150F",
+          "warn": "#E5A93B",
+          "danger": "#FF6B58"
+        },
+        "light": {
+          "bg": "#F2EFE8",
+          "bg_deep": "#E2DED3",
+          "fg": "#17150F",
+          "fg_mute": "#5E574A",
+          "line": "#BFB9AB",
+          "accent": "#6E5410",
+          "accent_on": "#F5F1E8",
+          "warn": "#6F4E00",
+          "danger": "#A81309"
+        }
+      }
     }
   }
 }
