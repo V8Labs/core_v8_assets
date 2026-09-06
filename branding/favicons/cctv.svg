@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="cctv">
+  <!-- Favicon monograma cctv. Inicial "C" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,18.70) scale(0.03653,-0.03653) translate(-38.00,-714.00)" fill="#FFFFFF"><path d="M609.0 -14C791.0 -14 917.0 13 1019.0 52V284C917.0 230 795.0 197 649.0 197C467.0 197 332.0 260 332.0 349C332.0 438 446.0 503 625.0 503C745.0 503 845.0 472 908.0 432L991.0 628C894.0 683 762.0 714 609.0 714C273.0 714 38.0 561 38.0 349C38.0 136 273.0 -14 609.0 -14Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>
