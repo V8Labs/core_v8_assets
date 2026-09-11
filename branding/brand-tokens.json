@@ -273,6 +273,12 @@
           "danger": "#A81309"
         }
       }
+    },
+    "info": {
+      "$nota": "Azul de INTERFAZ de las apps V8 (branding 2026-09-11, caso XO: marcar mensajes que esperan respuesta). Es un color FUNCIONAL de estado, no un color de identidad: la identidad V8 Labs sigue siendo primario #262b39 + acento lima. Dos valores, uno por tema, mismo matiz (216) — el patrón que ya usa color_uso.acento, porque un solo valor no sobrevive a dos temas. Ambos pasan AA sobre bg Y sobre bg_deep: un valor que sólo pasa sobre bg se cae en inputs y modales. ⚠ NO es el Azul Eléctrico #0026FF: ese es de FXCKBOY, su regla es 'máximo UNA vez por pieza, es señal no decoración', y un marcador de estado se repite por definición — usarlo acá lo gastaría.",
+      "dark": "#679BE9",
+      "light": "#0E4B8F",
+      "contraste": "dark 5.00:1 sobre bg / 5.96:1 sobre bg_deep · light 6.30:1 sobre bg / 5.22:1 sobre bg_deep"
     }
   }
 }
