@@ -270,6 +270,24 @@ Bottom-nav contextual:
 - Si el objeto viene de Notion (tarea): `[ DETALLE ]   [ CHAT ]`.
 - Si el objeto es una notif de Mind (sin Notion source): **solo CHAT**.
 
+La ficha de adentro se ordena: **título · propiedades EDITABLES · propiedades AUTOMÁTICAS ·
+comentarios · cuerpo**. Implementación de referencia: `TareaDetalle.tsx` en
+`app_V8_NOTIFICATIONS`. El patrón visual canónico está pendiente de escribir — **V8-RMP-298,
+«ítem con propiedades»** — y hasta que exista, cada app lo resuelve por su cuenta.
+
+> ⚠ **HUECO NOMBRADO — falta el documento hermano de éste, y no es de branding.**
+> Acá se resuelve **cómo se VE** la separación entre editable y automática. **Qué propiedad
+> cae de cada lado, y por qué**, es criterio de arquitectura de datos, no de marca: no se
+> decide con paleta ni con jerarquía visual, sino sabiendo de dónde viene el dato y qué se
+> rompe si alguien lo pisa.
+>
+> Ese documento **todavía no existe**. Por `ops/0098` el criterio de arquitectura de datos es
+> consultoría de `notion` con `lord` gobernando, y `produccion` lo está proponiendo
+> formalmente (2026-09-15). Queda nombrado acá a pedido suyo, con su argumento, que es bueno:
+> **un hueco nombrado se busca; un hueco mudo se vuelve a descubrir dentro de seis meses.**
+>
+> Los dos documentos tienen que citarse. Cualquiera de los dos solo queda a mitad de camino.
+
 ### 8.3. Header pattern
 
 Todas las páginas comparten estructura:
