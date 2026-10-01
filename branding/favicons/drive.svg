@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="drive">
+  <!-- Favicon monograma drive. Inicial "Dr" Balgin Bold vectorizada.
+       Fondo #262b39, inicial #FFFFFF, punto #A2E771 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#262b39"/>
+  <g transform="translate(14.08,24.54) scale(0.02132,-0.02132) translate(-64.00,-700.00)" fill="#FFFFFF"><path d="M64.0 0H574.0C880.0 0 1072.0 146 1072.0 350C1072.0 554 877.0 700 574.0 700H64.0ZM357.0 197V504H584.0C691.0 504 772.0 440 772.0 350C772.0 261 691.0 197 584.0 197ZM1151.0 0H1423.0V228C1424.0 328 1518.0 390 1623.0 390C1677.0 390 1716.0 380 1744.0 363L1745.0 533C1705.0 543 1662.0 549 1613.0 549C1485.0 549 1385.0 501 1336.0 432H1332.0L1180.0 535H1151.0Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#A2E771"/>
+</svg>

@@ -124,11 +124,11 @@
     "color": "#262b39",
     "fondo": "transparente",
     "wordmark_por_app": {
-      "patron": "V8 + \" \" + <Nombre>",
-      "v8": "Balgin Expanded Bold",
-      "nombre": "Balgin Expanded Regular",
-      "regla": "Nombre con primera mayúscula, separado de V8 por UN ESPACIO. Ej: V8 Metrics, V8 Studio. (Cambio de doctrina 2026-06-02 pedido por Andy: antes iba pegado.)",
-      "ejemplo_ref": "app_V8_METRICS → V8 Metrics"
+      "patron": "<Nombre> pelado, SIN prefijo V8",
+      "nombre": "Balgin Expanded Bold",
+      "regla": "Vigente desde 2026-07-27 (LOGOMANIA §0): el nombre solo, sin 'V8 ' adelante — el nombre YA ES el logo. Ej: Studio, Dialogue, Drive. Generador: core_v8_assets/branding/wordmarks/_generate.py <Nombre> [dark|blanco].",
+      "ejemplo_ref": "app_V8_METRICS → Metrics",
+      "legado_con_v8": "El patrón 'V8 + Nombre' (cambio 2026-06-02) quedó LEGADO. Vale SOLO para 'V8 Labs', la app de entrada a la gestión — es la única que conserva el prefijo (apps-nombre-sin-prefijo-v8). Generador: _generate.py Labs --con-v8."
     }
   },
   "empresa": {

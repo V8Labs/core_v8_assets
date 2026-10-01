@@ -459,8 +459,16 @@ inicio del handler. Pasa con doble-tap del botón ↑.
 - Inline en componente: spinner v8-pulse-ring (ver Tailwind animations).
 
 ### Error
-- Soft inline: badge rojo con `text-v8-danger`.
-- Toda la página: `<div className="p-6 text-v8-danger">Error: {msg}</div>`.
+> ⚠ **Corregido 2026-09-30** (branding, a pedido de `drive`): esta sección decía `text-v8-danger`
+> y contradecía `brand-tokens.json` → `color.accion.danger_regla`, que reserva ese color
+> EXCLUSIVAMENTE para cancelar/rechazar/eliminar — "No usar para errores genéricos". Los tokens
+> son el SSOT (§"Lectura mínima", arriba); este doc no los redefine. `drive` siguió los tokens
+> antes de que esto se corrigiera, y es el patrón correcto.
+- Soft inline: badge con `text-v8-fg` + ícono "✗" — sin color de alarma; el error se lee por el
+  ícono y el texto, no por rojo.
+- Toda la página: `<div className="p-6 text-v8-fg">✗ Error: {msg}</div>`.
+- `text-v8-danger` se reserva para la acción destructiva en sí (botón Cancelar/Eliminar), nunca
+  para el estado de error que la rodea.
 
 ### Empty
 - En columnas vacías:
