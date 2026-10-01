@@ -1,6 +1,31 @@
-# V8 Labs en puntos — para clientes de terminal (hall v8coders, V8-RMP-693)
+# Logos en puntos — para clientes de terminal (hall v8coders, V8-RMP-693)
 
-## Los tres archivos
+## Coders y Roadmap (Andy, 2026-09-30) — el hall lleva SU nombre, no "V8 Labs"
+Andy: «en vez de que diga V8 Labs, generar el logotipo de V8 Coders y ese sí volverlo
+puntos. Un logo de puntos, a la esquina superior derecha; poner también en el mismo esquema
+el logotipo de Roadmap». Mismo esquema = mismo generador, misma retícula, mismo umbral; los
+wordmarks salen de `wordmarks/_generate.py` (Balgin Expanded Bold, pelados: el prefijo "V8"
+solo lo lleva V8 Labs — LOGOMANIA §0).
+
+| archivo | col | filas | uso |
+|---|---|---|---|
+| `coders-dots-64.txt` | 64 | 6 | esquina sup. derecha, terminal ≥ 132 col (si convive con Roadmap a la izquierda) o ≥ 80 solo |
+| `coders-dots-48.txt` | 48 | 5 | esquina sup. derecha, terminal 100–131 col con Roadmap al lado |
+| `coders-dots-40.txt` | 40 | 4 | iPhone (Blink): ancho completo, sin esquina |
+| `roadmap-dots-64.txt` | 64 | 5 | título del tablero, arriba a la izquierda |
+| `roadmap-dots-48.txt` | 48 | 4 | ídem, terminal 100–131 col |
+| `roadmap-dots-40.txt` | 40 | 4 | el piso de legibilidad — por debajo no se lee |
+
+`preview-coders-64.png` y `preview-roadmap-64.png` simulan Terminal.app. Los `logo-dots-*`
+de V8 Labs quedan como asset (sirven para cualquier otra terminal de la casa) pero **ya no
+van en el hall**.
+
+Generar: `core_v8_brand/scripts/logo-dots.py --svg wordmarks/wordmark-coders.svg --mono --cols 48`.
+`--mono` = un solo peso (sin partir Bold/Regular como en V8 Labs).
+
+---
+
+## V8 Labs — los tres archivos (asset general, ya no es el header del hall)
 | archivo | columnas | filas | para |
 |---|---|---|---|
 | `logo-dots-96.txt` | 96 | 8 | MacBook / Linux con terminal ≥ 100 col — **el fiel al logo** |
