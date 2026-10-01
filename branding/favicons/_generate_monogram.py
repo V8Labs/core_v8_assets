@@ -19,15 +19,21 @@ from fontTools.pens.transformPen import TransformPen
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 
-app = sys.argv[1]
-initial = sys.argv[2]
+argv = [a for a in sys.argv[1:] if not a.startswith("--")]
+app = argv[0]
+initial = argv[1]
+
+def opt(flag, default):
+    return sys.argv[sys.argv.index(flag) + 1] if flag in sys.argv else default
 
 CANVAS = 64
 FRAC = 0.56          # alto/ancho objetivo de la inicial dentro del lienzo
 tokens = json.load(open(os.path.join(ROOT, "branding", "brand-tokens.json")))
-BG = tokens["color"]["primario"]
-ACENTO = tokens["color"]["acento"]
-FG = "#FFFFFF"
+# Caras por HOST (drive-jc 2026-09-30): misma construcción —inicial Balgin Bold + punto de
+# firma— con la placa y el acento de ESA marca. Sin flags, la placa V8 de siempre.
+BG = opt("--bg", tokens["color"]["primario"])
+ACENTO = opt("--accent", tokens["color"]["acento"])
+FG = opt("--fg", "#FFFFFF")
 OTF = os.path.join(ROOT, tokens["tipografia"]["wordmark"]["archivo_bold"])
 
 font = TTFont(OTF)

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="drive-jc">
+  <!-- Favicon monograma drive-jc. Inicial "JC" Balgin Bold vectorizada.
+       Fondo #043b59, inicial #FFFFFF, punto #56cfe1 (acento de familia). Generado por _generate_monogram.py. -->
+  <rect width="64" height="64" fill="#043b59"/>
+  <g transform="translate(14.08,24.83) scale(0.01969,-0.01969) translate(3.00,-714.00)" fill="#FFFFFF"><path d="M267.0 -14C549.0 -14 740.0 82 740.0 269V700H448.0V349C448.0 250 337.0 201 224.0 201C169.0 201 73.0 214 23.0 228L-3.0 15C57.0 -1 176.0 -14 267.0 -14ZM1407.0 -14C1589.0 -14 1715.0 13 1817.0 52V284C1715.0 230 1593.0 197 1447.0 197C1265.0 197 1130.0 260 1130.0 349C1130.0 438 1244.0 503 1423.0 503C1543.0 503 1643.0 472 1706.0 432L1789.0 628C1692.0 683 1560.0 714 1407.0 714C1071.0 714 836.0 561 836.0 349C836.0 136 1071.0 -14 1407.0 -14Z"/></g>
+  <circle cx="53" cy="53" r="4" fill="#56cfe1"/>
+</svg>
