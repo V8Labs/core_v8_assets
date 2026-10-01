@@ -7,14 +7,22 @@ el logotipo de Roadmap». Mismo esquema = mismo generador, misma retícula, mism
 wordmarks salen de `wordmarks/_generate.py` (Balgin Expanded Bold, pelados: el prefijo "V8"
 solo lo lleva V8 Labs — LOGOMANIA §0).
 
-| archivo | col | filas | uso |
+**Lo que está EN PRODUCCIÓN (Andy fijó los tamaños, 2026-09-30, distintos de la propuesta):**
+Roadmap chico — «presencia puntual» — y Coders mediano — «prudente, preciso». Roadmap a la
+izquierda, Coders en la esquina superior derecha; los dos juntos desde 92 columnas, más
+angosto solo Coders 48, y bajo 50 columnas Coders 40. V8 Labs salió del hall.
+
+| archivo | col | filas | estado |
 |---|---|---|---|
-| `coders-dots-64.txt` | 64 | 6 | esquina sup. derecha, terminal ≥ 132 col (si convive con Roadmap a la izquierda) o ≥ 80 solo |
-| `coders-dots-48.txt` | 48 | 5 | esquina sup. derecha, terminal 100–131 col con Roadmap al lado |
-| `coders-dots-40.txt` | 40 | 4 | iPhone (Blink): ancho completo, sin esquina |
-| `roadmap-dots-64.txt` | 64 | 5 | título del tablero, arriba a la izquierda |
-| `roadmap-dots-48.txt` | 48 | 4 | ídem, terminal 100–131 col |
-| `roadmap-dots-40.txt` | 40 | 4 | el piso de legibilidad — por debajo no se lee |
+| `coders-dots-48.txt` | 48 | 5 | **en el hall** — esquina sup. derecha |
+| `coders-dots-40.txt` | 40 | 4 | **en el hall** — terminales < 50 col |
+| `roadmap-dots-40.txt` | 40 | 4 | **en el hall** — arriba a la izquierda, desde 92 col |
+| `coders-dots-64.txt` | 64 | 6 | asset, no se usa hoy |
+| `roadmap-dots-64.txt` | 64 | 5 | asset, no se usa hoy |
+| `roadmap-dots-48.txt` | 48 | 4 | asset, no se usa hoy |
+
+40 es el piso de legibilidad de Roadmap: a 32 no se lee (probado). Si estos tres cambian,
+avisar a `remote`: van embebidos con `go:embed` y la copia es a mano.
 
 `preview-coders-64.png` y `preview-roadmap-64.png` simulan Terminal.app. Los `logo-dots-*`
 de V8 Labs quedan como asset (sirven para cualquier otra terminal de la casa) pero **ya no
