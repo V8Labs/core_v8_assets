@@ -16,13 +16,33 @@ angosto solo Coders 48, y bajo 50 columnas Coders 40. V8 Labs salió del hall.
 |---|---|---|---|
 | `coders-dots-48.txt` | 48 | 5 | **en el hall** — esquina sup. derecha |
 | `coders-dots-40.txt` | 40 | 4 | **en el hall** — terminales < 50 col |
-| `roadmap-dots-40.txt` | 40 | 4 | **en el hall** — arriba a la izquierda, desde 92 col |
+| `roadmap-text-small.txt` | 13 | 1 | **propuesto para el hall** — ver §Roadmap más chico abajo |
+| `roadmap-dots-40.txt` | 40 | 4 | asset, reemplazado como logo del hall (ver abajo) |
 | `coders-dots-64.txt` | 64 | 6 | asset, no se usa hoy |
 | `roadmap-dots-64.txt` | 64 | 5 | asset, no se usa hoy |
 | `roadmap-dots-48.txt` | 48 | 4 | asset, no se usa hoy |
 
-40 es el piso de legibilidad de Roadmap: a 32 no se lee (probado). Si estos tres cambian,
+40 es el piso de legibilidad de Roadmap EN PUNTOS: a 32 ya degrada visiblemente y a 24 no se
+lee (probado, confirmado de nuevo 2026-09-30 con preview PNG). Si estos archivos cambian,
 avisar a `remote`: van embebidos con `go:embed` y la copia es a mano.
+
+### Roadmap más chico que 40 (Andy, 2026-09-30) — por qué deja de ser puntos
+Andy pidió Roadmap «mucho más chico» que el de 40 columnas, alineado abajo al nivel de la
+línea base de Coders. 40 ya es el piso de legibilidad de los puntos (documentado arriba, y
+reconfirmado con preview a 32/28/24 col: a 32 el trazo ya se degrada, a 24 es ruido). Achicar
+el braille por debajo de eso no es "más pulido", es ilegible — así que la pieza deja de ser
+braille y pasa a **texto versalitas espaciado**: `roadmap-text-small.txt` → `R O A D M A P`
+(mayúsculas, 1 espacio entre letra, 13 columnas, 1 fila, sin espacio a la derecha).
+
+Dos ventajas de este camino sobre forzar los puntos más chico:
+1. **Resuelve solo la pregunta de la línea base.** El braille `roadmap-dots-40` lleva una «p»
+   con descendente — por eso el hall compensaba 1 fila a mano. El texto en mayúsculas no tiene
+   descendentes: no hay nada que compensar, la fila que imprime la cadena ES la línea base.
+2. Es más angosto que cualquier versión en puntos que siga leyéndose (13 col vs. el piso de 40).
+
+Estilo recomendado para el embebido: mismo blanco de los puntos (`#FFFFFF` sobre fondo
+oscuro), sin negrita forzada — si la terminal soporta bold ANSI y se ve bien, úsalo; si no,
+el tracking (el espacio entre letras) ya hace el trabajo de "versalita".
 
 `preview-coders-64.png` y `preview-roadmap-64.png` simulan Terminal.app. Los `logo-dots-*`
 de V8 Labs quedan como asset (sirven para cualquier otra terminal de la casa) pero **ya no
