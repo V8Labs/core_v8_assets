@@ -1,11 +1,11 @@
 # drive-jc — la cara de Drive en drive.jeanscolombianos.com
 
-> ⚠ **PROVISIONAL — pendiente de bendición de Andy.** Jeans Colombianos NO tiene manual de
-> marca ni tokens en este SSOT (2026-09-30). Los colores de abajo no son inventados pero
-> tampoco son ley: están **medidos del sitio vivo jeanscolombianos.com** (CSS del tema
-> Shopify, 558 KB: `#043b59` aparece 100 veces, es el color de la casa; `#56cfe1` es su
-> acento). Cuando Andy los bendiga —o entregue el manual real de JC— esto pasa a
-> `brand-tokens.json` como paleta de host y se quita este aviso.
+> ✅ **APROBADO por Andy (2026-09-30, vía `drive`):** «el azul de jeans colombianos aplícalo
+> en el drive en el fondo, y el JC va blanco». Los colores salieron medidos del sitio vivo
+> jeanscolombianos.com (CSS del tema Shopify: `#043b59` aparece 100 veces, es el color de la
+> casa; `#56cfe1` su acento) y con la aprobación pasan a ley: la paleta UX completa del host
+> vive en `brand-tokens.json` → `ux.hosts.jc` (dark). Jeans Colombianos sigue SIN manual de
+> marca propio en este repo: esto cubre su cara en Drive, no la marca entera.
 
 ## Construcción — la MISMA que V8, otra placa
 Andy pidió «la misma iconografía de los íconos V8 (Balgin Bold, monograma, punto de firma)
