@@ -303,6 +303,54 @@ active:text-v8-fg). Sin marco, sin texto. La identidad la da el ícono.
 Referencia: `src/components/shells/AppShell.tsx` y el header de
 `TareaDetalle.tsx`.
 
+### 8.3.1. LEY UNIVERSAL — ⏻ Power y ✎ Feedback respecto del logo
+
+> Orden de Andy 2026-10-16 (V8-RMP-1637). **Mientras todo esté en beta**, TODA app V8
+> con logo (`*.v8labs.co`) muestra los mismos dos íconos, en posición FIJA respecto del
+> logo. No se reubican por app ni por pantalla.
+
+- **⏻ Power** — pegado al logo, a su lado. Lleva a `off.v8labs.co?vuelve=…` (ops/0220).
+- **✎ Feedback** — debajo del logo, alineado con él. Abre el formulario del canal de
+  remote (V8-RMP-1308): agente destino, pregunta, párrafo, archivos. **No se inventa
+  otro canal de feedback por app.**
+- Ambos son icon-only (§9.3): size=14, `text-v8-fg-mute active:text-v8-fg`, sin marco ni texto.
+- Mismo orden en toda app: Power primero (junto al logo), Feedback segundo (debajo).
+
+**Logo a la izquierda** (caso base): los íconos van a la derecha del logo.
+
+```
+┌──────────────────────────┐
+│ [LOGO] ⏻                 │
+│ [LOGO]                   │
+│   ✎                      │
+└──────────────────────────┘
+```
+Power junto al logo; Feedback en la línea de abajo, alineado con el borde del logo.
+
+**Logo centrado**: Power centrado verticalmente respecto del logo, a su lado; Feedback
+abajo a la **izquierda** del logo.
+
+```
+┌──────────────────────────┐
+│        [LOGO]  ⏻         │
+│  ✎     [LOGO]            │
+└──────────────────────────┘
+```
+
+**Logo a la derecha**: igual que a la izquierda — los íconos van a la **derecha** del
+logo (regla literal de Andy), Power junto al logo y Feedback debajo, alineado.
+
+```
+┌──────────────────────────┐
+│                [LOGO] ⏻  │
+│                [LOGO]    │
+│                  ✎       │
+└──────────────────────────┘
+```
+
+Verificación obligatoria: cada app la adopta y se comprueba **abierta en el teléfono**
+(captura), con Feedback abriendo el formulario de remote.
+
 ### 8.4. Modal full-screen
 
 Cuando un modal necesita más de 2 acciones, **NO** flotar. Usar pantalla
