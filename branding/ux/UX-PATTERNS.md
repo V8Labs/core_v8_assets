@@ -313,6 +313,12 @@ Referencia: `src/components/shells/AppShell.tsx` y el header de
 - **✎ Feedback** — debajo del logo, alineado con él. Abre el formulario del canal de
   remote (V8-RMP-1308): agente destino, pregunta, párrafo, archivos. **No se inventa
   otro canal de feedback por app.**
+  - **En apps web**, igual que el Power: un enlace a la página única de remote con
+    `?desde=<app>&vuelve=<url de vuelta>` (URL final la publica remote, V8-RMP-1718).
+    La app no arma formulario propio ni llama al hall.
+  - **En V8 Coders (terminal)**, el ✎ abre el formulario del propio TUI (`cliente/feedback.go`).
+  - **Quién envía:** solo operadores (D-5600, Andy 2026-10-20). El control vive en el
+    servidor de la página; la app muestra el ✎ igual a todos sus usuarios.
 - Ambos son icon-only (§9.3): size=14, `text-v8-fg-mute active:text-v8-fg`, sin marco ni texto.
 - Mismo orden en toda app: Power primero (junto al logo), Feedback segundo (debajo).
 
