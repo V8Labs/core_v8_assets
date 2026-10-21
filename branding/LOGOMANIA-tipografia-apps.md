@@ -103,6 +103,14 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
     - 🗑️ Queda fuera de uso como ícono `boletin-app-avatar-oro-1024.png` (era un avatar de
       perfil, apaisado y con aire muerto arriba y abajo); sigue sirviendo de foto de perfil.
 
+- **Sellos de presencia — Mind y Pulse** (Andy 2026-10-21, V8-RMP-1734): no son logo de app
+  sino la firma de un actor DENTRO de una pantalla, alineada a la derecha en la cabecera. En XO
+  van `sello-mind.svg` en el chat con Mind y `sello-pulse.svg` en la encuesta `/pulse/:id`.
+  Receta común: Balgin Expanded **Regular** en contornos, drop-cap (la inicial a 1,45× de la altura x),
+  sin marco, `fill=currentColor`, viewBox de alto 19.9 y se muestran a 18 px. Pulse es el par
+  exacto de Mind: misma escala, misma línea base y el mismo aire lateral. Generador:
+  `branding/wordmarks/_sello.py <Nombre>`, que reproduce MindSeal path por path.
+
 ## 2. Tamaños límite (logomanía) — por contexto de uso
 | Uso | Tamaño (alto) | Nota |
 |---|---|---|
