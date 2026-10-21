@@ -303,16 +303,19 @@ active:text-v8-fg). Sin marco, sin texto. La identidad la da el ícono.
 Referencia: `src/components/shells/AppShell.tsx` y el header de
 `TareaDetalle.tsx`.
 
-### 8.3.1. LEY UNIVERSAL — ⏻ Power y ✎ Feedback respecto del logo
+### 8.3.1. LEY UNIVERSAL — ⏻ Power y ✎ Feedback en el header de toda app
 
-> Orden de Andy 2026-10-16 (V8-RMP-1637). **Mientras todo esté en beta**, TODA app V8
-> con logo (`*.v8labs.co`) muestra los mismos dos íconos, en posición FIJA respecto del
-> logo. No se reubican por app ni por pantalla.
+> Orden de Andy 2026-10-16 (V8-RMP-1637), **corregida por Andy el 2026-10-21**
+> (V8-RMP-1734, sala de dialogue): «la ubicación de esos botones, tanto el de feedback
+> como el de power, va a depender de la aplicación y no siempre va a salir como se dijo.»
 
-- **⏻ Power** — pegado al logo, a su lado. Lleva a `off.v8labs.co?vuelve=…` (ops/0220).
-- **✎ Feedback** — debajo del logo, alineado con él. Abre el formulario del canal de
-  remote (V8-RMP-1308): agente destino, pregunta, párrafo, archivos. **No se inventa
-  otro canal de feedback por app.**
+**Lo que ES ley** (mientras todo esté en beta): TODA app V8 (`*.v8labs.co`, y V8 Coders
+en terminal) tiene ⏻ Power y ✎ Feedback **en su header**, alcanzables **a un toque**
+desde cada pantalla.
+
+- **⏻ Power** — lleva a `off.v8labs.co?vuelve=…` (ops/0220).
+- **✎ Feedback** — abre el formulario del canal de remote (V8-RMP-1308): agente destino,
+  pregunta, párrafo, archivos. **No se inventa otro canal de feedback por app.**
   - **En apps web**, igual que el Power: un enlace a la página única de remote con
     `?desde=<app>&vuelve=<url de vuelta>` (URL final la publica remote, V8-RMP-1718).
     La app no arma formulario propio ni llama al hall.
@@ -320,42 +323,41 @@ Referencia: `src/components/shells/AppShell.tsx` y el header de
   - **Quién envía:** solo operadores (D-5600, Andy 2026-10-20). El control vive en el
     servidor de la página; la app muestra el ✎ igual a todos sus usuarios.
 - Ambos son icon-only (§9.3): size=14, `text-v8-fg-mute active:text-v8-fg`, sin marco ni texto.
-- Mismo orden en toda app: Power primero (junto al logo), Feedback segundo (debajo).
 
-**Logo a la izquierda** (caso base): los íconos van a la derecha del logo.
+**Lo que NO es ley: DÓNDE van.** La ubicación la decide cada app según su header. Dos
+apps pueden tenerlos en lugares distintos y las dos cumplen. Lo único que se revisa es
+que estén en el header y a un toque.
+
+**Ejemplo real — XO (dialogue, 2026-10-21):**
+
+```
+Hilos:
+┌──────────────────────────────────────────┐
+│ ⏻ ⚙ ✎        [LOGO vX.Y]      Fichas 🔍 │
+└──────────────────────────────────────────┘
+Fichas / Escucha:
+┌──────────────────────────────────────────┐
+│ ⏻ ✎          [LOGO vX.Y]             … │
+└──────────────────────────────────────────┘
+```
+A la izquierda Power, Configuración (⚙ junta cuenta, tema, notificaciones y chats
+bloqueados) y Feedback; logo con versión centrado; a la derecha Fichas y Buscar. En
+Fichas y Escucha, Power y Feedback también a la izquierda, sin engranaje.
+
+**Sugerencia por defecto (no obligatoria)** — para la app que no tenga una razón propia:
+Power pegado al logo, a su lado; Feedback debajo del logo, alineado con él (con logo
+centrado, Feedback abajo a la izquierda). Era la regla del 16-oct; desde el 21-oct es
+solo un punto de partida.
 
 ```
 ┌──────────────────────────┐
 │ [LOGO] ⏻                 │
-│ [LOGO]                   │
 │   ✎                      │
 └──────────────────────────┘
 ```
-Power junto al logo; Feedback en la línea de abajo, alineado con el borde del logo.
 
-**Logo centrado**: Power centrado verticalmente respecto del logo, a su lado; Feedback
-abajo a la **izquierda** del logo.
-
-```
-┌──────────────────────────┐
-│        [LOGO]  ⏻         │
-│  ✎     [LOGO]            │
-└──────────────────────────┘
-```
-
-**Logo a la derecha**: igual que a la izquierda — los íconos van a la **derecha** del
-logo (regla literal de Andy), Power junto al logo y Feedback debajo, alineado.
-
-```
-┌──────────────────────────┐
-│                [LOGO] ⏻  │
-│                [LOGO]    │
-│                  ✎       │
-└──────────────────────────┘
-```
-
-Verificación obligatoria: cada app la adopta y se comprueba **abierta en el teléfono**
-(captura), con Feedback abriendo el formulario de remote.
+Verificación obligatoria: cada app se comprueba **abierta en el teléfono** (captura):
+Power y Feedback en el header, a un toque, y Feedback abriendo el formulario de remote.
 
 ### 8.4. Modal full-screen
 
