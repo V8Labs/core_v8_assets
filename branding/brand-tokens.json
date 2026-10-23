@@ -134,7 +134,9 @@
   "empresa": {
     "nombre_comercial": "V8 Labs",
     "razon_social": "V8 Labs S.A.S.",
-    "nit": "901920939-6"
+    "nit": "901920939-6",
+    "correo": "info@v8labs.co",
+    "telefono": "+57 311 686 6279"
   },
   "ux": {
     "$nota": "Tokens de superficie / UI usados por apps del ecosistema (notifications, dealer, studio, etc.). Probados en producción por notifications. Soportan tema light + dark sin reescribir clases — cada app mapea estos valores a CSS vars (--v8-*) y Tailwind colors.v8.*. Ver branding/ux/UX-PATTERNS.md §6 'Color — reglas duras' y §3 'Tokens'.",
