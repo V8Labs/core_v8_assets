@@ -601,6 +601,15 @@ crece a demanda; nadie agregó "todos los Heroicons por las dudas".
 agresivo durante el bootstrap del MVP. Habilitalo cuando el dataset esté
 estable.
 
+**Lienzo gris de Safari detrás de la app (regla DURA, toda PWA, Andy 25-oct):**
+Safari 26 ya no lee `theme_color` y tiñe su barra fija con el fondo de `html`/`body`
+que asoma debajo del menú — el manifest solo pinta el splash. Mientras la pantalla
+está montada: `html`/`body` van a `#1c1c1e` vía `data-lienzo` en `:root`, y el fondo
+animado va recortado a `h-[100dvh] overflow-hidden`. Los colores de la app no cambian.
+Código, el porqué completo y los commits de referencia (boletín b08b970, XO 598b6f8)
+viven en el skill `frontend-marca` — esto es solo el pointer para quien lea el SSOT
+de patrones primero.
+
 ---
 
 ## 15. Anti-patterns explícitos (NO HACER)
