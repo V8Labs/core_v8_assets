@@ -62,8 +62,10 @@ Cada patrón documenta, en orden:
 
 - **Fondo base:** `primario #262b39`. Negro/blanco = base.
 - **Verde `acento` #A2E771:** acento VIVO (enlaces, subrayados, glow/animación de
-  marcos). **NUNCA fondo de botón ni superficie extensa.** (Ver regla dura en BRANDING.md.)
-- **Botones:** base o color semántico de acción — nunca el verde de marca.
+  marcos) y fondo del botón de acción principal. **NUNCA superficie extensa.** (Ver regla dura en BRANDING.md.)
+- **Botones (Andy 2026-10-25):** acción principal = fondo verde `#A2E771` + texto
+  `primario #262b39`; secundarios = contorno o base; semánticos = su color.
+  Antes: «nunca el verde de marca». Detalle: BRANDING.md §Botones · `color_uso.boton_accion`.
 
 ## Pendientes de curar (cola)
 

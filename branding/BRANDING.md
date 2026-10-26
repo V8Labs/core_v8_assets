@@ -88,24 +88,41 @@ conceptual en el mismo lenguaje (cuerpo `primario`, line-art blanco, punto `acen
 | `color.tenue` | `#6b7280` | metadatos, pies, secundario |
 | `color.linea` | `#d1d5db` | reglas y bordes suaves |
 | `color.acento` | `#A2E771` | **acento vivo** — ver regla dura abajo |
-| `color.acento_texto` | `#163309` | texto sobre verde, **solo** en el caso raro de que el verde sea fondo (evitar) |
+| `color.acento_texto` | `#163309` | texto sobre verde en otros fondos verdes raros (evitar); **en el botón de acción el texto es `primario`** (ver Botones) |
 
 ### ⚠️ Regla dura del verde `acento` (#A2E771)
 
 El verde es **acento de vida, no superficie**. Le da luz y energía a la interfaz;
-nunca la estructura. Es el destello, no el relleno.
+nunca la estructura. Es el destello, no el relleno — con **una** excepción: el
+botón de acción principal (abajo).
 
 - ✅ **Permitido:** subrayado de enlaces · líneas vivas bajo palabras clave ·
-  glow / animación de marcos y bordes · micro-acentos que "encienden" un frame.
-- ❌ **Prohibido:** fondo de botón · relleno de bloques o tarjetas · fondo de
-  tab/sección activa · cualquier área extensa. **El verde nunca es la superficie.**
+  glow / animación de marcos y bordes · micro-acentos que "encienden" un frame ·
+  **fondo del botón de acción principal**.
+- ❌ **Prohibido:** relleno de bloques o tarjetas · fondo de tab/sección activa ·
+  cualquier área extensa. **Fuera del botón, el verde nunca es la superficie.**
 
-Los **botones** usan la base (`primario` / negro / blanco) o el color **semántico**
-de la acción (ver UX), **nunca** el verde de marca. Negro y blanco son la base;
-el verde solo acentúa (enlaces, subrayados, animaciones vivas).
+### Botones (Andy, 2026-10-25)
 
-> Origen del verde: app de firma (Documenso). Nota: fue Documenso quien lo usó
-> primero como fondo de botón — eso es el antipatrón que esta regla corrige.
+- **Acción principal:** fondo `color.acento` `#A2E771` + texto `color.primario`
+  `#262b39` (borde = el mismo verde). Contraste medido: **9,55:1**; hover
+  `#B5EC8D` (el verde 80 % + 20 % blanco) **10,32:1**. Token: `color_uso.boton_accion`.
+- **Secundarios:** contorno o base (`primario` / negro / blanco).
+- **Semánticos:** el color que dice qué hacen (peligro = `ux.accion.danger`,
+  +/− de una máscara, etc.) — no se pasan al verde.
+- **Deshabilitado:** sin relleno verde (contorno `line`, texto `fg_mute`).
+- **Modo light:** el lima contra la superficie clara da 1,07:1 (`bg`) / 1,12:1
+  (`bg_deep`) — el botón no se separa del fondo; ahí lleva **borde `primario`**.
+- Radio: `geometria.radio_boton` (sin cambio).
+
+> Decisión de Andy (2026-10-25 ~20:30, la opción «2» de tres): «botones con
+> relleno verde y texto oscuro, en el canónico para que las otras apps lo
+> hereden». Reemplaza la regla anterior: «los botones usan la base o el color
+> semántico de la acción, **nunca** el verde de marca» (y «fondo de botón» en la
+> lista de prohibidos). El texto `#262b39` es el par que ya usaban el aviso de
+> versión de notifications y de Studio.
+>
+> Origen del verde: app de firma (Documenso), que lo usó como fondo de botón.
 
 ### Resolución del acento contra fondos claros (modo light)
 

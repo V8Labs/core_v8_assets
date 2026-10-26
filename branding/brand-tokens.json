@@ -2,8 +2,9 @@
   "meta": {
     "marca": "V8 Labs",
     "estado": "provisional",
-    "actualizado": "2026-05-31",
+    "actualizado": "2026-10-25",
     "nota": "Diseño en aprobación. Mientras tanto se itera en V8Labs/ops-admin-documentos (marca/tema.typ); esta es la copia publicada para que otras apps arranquen. Al aprobar el look, este archivo queda como fuente de verdad.",
+    "nota_2026_10_25": "Decisión de Andy (2026-10-25 ~20:30, opción «2» de las tres que le mostró studio): el botón de ACCIÓN principal va con fondo color.acento (#A2E771) y texto color.primario (#262b39), en este canónico para que todas las apps lo hereden. Reemplaza la regla anterior «botones: base o semántico; NUNCA el verde acento» y saca «fondo de botón» de color_uso.acento.prohibido. Ver color_uso.botones y color_uso.boton_accion.",
     "raw_url_base": "https://raw.githubusercontent.com/V8Labs/core_v8_assets/main/"
   },
   "color": {
@@ -19,7 +20,7 @@
     "$scope": "DOS paletas por medio (decisión branding 2026-06-02): `color.*` (este bloque) = DOCUMENTOS / print / landing estática (mundo PT Serif). `ux.superficie.*` = APPS interactivas (mundo IBM Plex Sans — sistema/UI V8 (la Helvetica Condensed es de FXCKBOY, no de V8), soporta light/dark). `color.tenue`≈`ux.*.fg_mute` y `color.linea`≈`ux.*.line` son análogos por medio, valores distintos a propósito; no unificar.",
     "primario": "fondo base, títulos, reglas",
     "acento": {
-      "rol": "acento vivo — destello, no superficie",
+      "rol": "acento vivo — destello, no superficie (única superficie permitida: el botón de acción, ver boton_accion — Andy 2026-10-25)",
       "permitido": [
         "subrayado de enlaces",
         "líneas vivas bajo palabras",
@@ -27,7 +28,6 @@
         "micro-acentos que encienden un frame"
       ],
       "prohibido": [
-        "fondo de botón",
         "relleno de bloques/tarjetas",
         "fondo de tab/sección",
         "áreas extensas"
@@ -47,7 +47,18 @@
         ]
       }
     },
-    "botones": "base (primario/negro/blanco) o color semántico de la acción; NUNCA el verde acento"
+    "botones": "ACCIÓN principal: fondo color.acento (#A2E771) + texto color.primario (#262b39) — ver boton_accion. Secundarios: contorno o base (primario/negro/blanco). Semánticos (peligro, +/−, estados que dicen qué hacen por su color): su color semántico (ux.accion). Decisión de Andy 2026-10-25; antes: «base o semántico; NUNCA el verde acento».",
+    "boton_accion": {
+      "$nota": "Botón de ACCIÓN principal (Andy 2026-10-25). Contraste medido WCAG 2.x: texto #262b39 sobre #A2E771 = 9.55:1; sobre el hover #B5EC8D = 10.32:1 (AA ≥ 4.5). Sobre superficie CLARA (ux.superficie.light.bg #D9DCE0 / bg_deep #C5C9D0) el relleno lima contra el fondo da 1.07:1 / 1.12:1: el botón no se separa del fondo sin borde → en light, borde color.primario (10.26:1 sobre #D9DCE0). Deshabilitado: vuelve a secundario apagado (sin relleno verde). El radio sigue geometria.radio_boton.",
+      "fondo": "color.acento",
+      "texto": "color.primario",
+      "borde": "color.acento",
+      "borde_light": "color.primario",
+      "hover_fondo": "#B5EC8D",
+      "hover_regla": "color.acento mezclado 80 % con 20 % de blanco (CSS: color-mix(in srgb, #A2E771 80%, #fff))",
+      "deshabilitado": "sin relleno: contorno ux.*.line y texto ux.*.fg_mute",
+      "radio": "geometria.radio_boton"
+    }
   },
   "geometria": {
     "$nota": "V8 industrial: sin redondeo. Las esquinas rectas dan al sistema su lectura técnica/maquila. Border-radius en chips, badges, pills, modales y botones = 0 por defecto. Cualquier redondeo requiere justificación explícita y vivirá acá como excepción documentada.",
