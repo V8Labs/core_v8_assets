@@ -99,6 +99,13 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
       (Andy 2026-07-28). El ícono de app es superficie de ecosistema, no de la marca suelta:
       en la home screen las apps V8 se reconocen entre sí por el fondo. La paleta propia de la
       app (ej. crema/oro de Boletín) vive en el logo y en la foto de perfil, no acá.
+    - **Excepción — XO, V8 y POS** (Andy 2026-10-27): son las tres que se abren todo el día y
+      se confundían en la pantalla de inicio. Mismo dibujo, otra placa: **XO** lima `#A2E771` +
+      letra `#262b39` · **V8** plateado degradado `#F4F5F7→#C9CDD3→#8E939F` (diagonal) + letra
+      `#262b39` · **POS** `#262b39` + letra lima `#A2E771`. El resto de las apps sigue en
+      `#262b39`/blanco. Juegos en `app-icons/{xo,v8,pos}/`; se recolorean con
+      `core_v8_brand/scripts/app-icon-recolor.py` (láminas: `core_v8_brand/brands/v8labs/
+      propuestas/iconos-xo-v8-pos-20261027/`).
     - Ej.: `app-icons/boletin/boletin-app-icon-*`.
     - 🗑️ Queda fuera de uso como ícono `boletin-app-avatar-oro-1024.png` (era un avatar de
       perfil, apaisado y con aire muerto arriba y abajo); sigue sirviendo de foto de perfil.
