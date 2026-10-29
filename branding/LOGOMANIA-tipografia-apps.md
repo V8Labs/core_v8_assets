@@ -99,21 +99,21 @@ comms, launchers y rutas del ecosistema entero, sin ganancia visible para nadie)
       (Andy 2026-07-28). El ícono de app es superficie de ecosistema, no de la marca suelta:
       en la home screen las apps V8 se reconocen entre sí por el fondo. La paleta propia de la
       app (ej. crema/oro de Boletín) vive en el logo y en la foto de perfil, no acá.
-    - **Excepción — XO, V8, POS y Boletín/Vendedores** (Andy 2026-10-27, swap 2026-10-29): son
-      las apps que se abren todo el día y se confundían en la pantalla de inicio. Mismo dibujo,
-      otra placa. Estado vigente tras el swap del 29-oct (tema "cambio logos" — intercambio de
-      paleta entre V8 y el par Boletín/POS, para que no coincidan):
+    - **Excepción — XO, V8 y el par POS/Boletín-Vendedores** (Andy 2026-10-27, swap 2026-10-29,
+      ajuste POS 2026-10-29 tarde): son las apps que se abren todo el día y se confundían en la
+      pantalla de inicio. Mismo dibujo, otra placa. Estado vigente:
       **XO** lima `#A2E771` + letra `#262b39` (sin cambios, pendiente de diálogo) ·
       **V8** `#262b39` + letra lima `#A2E771` (tomó la placa que tenía POS) ·
-      **POS** `#262b39` + letra plateada degradado `#F4F5F7→#C9CDD3→#8E939F` (tomó la letra que
-      tenía V8) · **Boletín/Vendedores** (ícono de boletin.app, `app-icons/boletin/boletin-icon*`)
-      plateado degradado `#F4F5F7→#C9CDD3→#8E939F` (diagonal) + letra `#262b39` (tomó la placa
-      que tenía V8 antes del swap). El resto de las apps sigue en `#262b39`/blanco. Juegos en
-      `app-icons/{xo,v8,pos,boletin}/`. XO y POS se recolorearon con
+      **POS** y **Boletín/Vendedores** (ícono de boletin.app, `app-icons/boletin/boletin-icon*`)
+      comparten paleta — plateado degradado `#F4F5F7→#C9CDD3→#8E939F` (diagonal) de placa +
+      letra `#262b39` — porque son el mismo par de apps (Andy, 29-oct tarde: "para el POS será
+      así, solo que se diferencian en que la vendedora tiene el ícono de boletín.app y la otra
+      el de POS"). El resto de las apps sigue en `#262b39`/blanco. Juegos en
+      `app-icons/{xo,v8,pos,boletin}/`. XO se recoloreó con
       `core_v8_brand/scripts/app-icon-recolor.py` (láminas del 27-oct: `core_v8_brand/brands/
-      v8labs/propuestas/iconos-xo-v8-pos-20261027/`); V8, POS y Boletín del swap del 29-oct se
-      editaron a mano (la letra plateada en degradado y la placa plateada no entran en el
-      contrato del script, que solo recolorea con hex plano).
+      v8labs/propuestas/iconos-xo-v8-pos-20261027/`); V8, POS y Boletín se editaron a mano (la
+      letra plateada en degradado y la placa plateada no entran en el contrato del script, que
+      solo recolorea con hex plano).
     - Ej.: `app-icons/boletin/boletin-app-icon-*`.
     - 🗑️ Queda fuera de uso como ícono `boletin-app-avatar-oro-1024.png` (era un avatar de
       perfil, apaisado y con aire muerto arriba y abajo); sigue sirviendo de foto de perfil.
