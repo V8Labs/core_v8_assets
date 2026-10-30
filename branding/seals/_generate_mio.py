@@ -64,7 +64,7 @@ i_cx = i_xo + (i_x0 + i_x1) / 2.0
 
 # --- tilde compuesta a mano: paralelogramo rotado, mismo coord space que las letras ---
 hw, hl = 70.0, 135.0          # semigrosor / semilargo, peso comparable al trazo de las letras
-theta = math.radians(22)      # inclinación: sube de izquierda a derecha, como una tilde normal
+theta = math.radians(-22)     # inclinación: sube de izquierda a derecha, como una tilde normal
 cx = i_cx + 40                # corrida levemente a la derecha del asta de la I (uso tipográfico)
 gap = 45.0                    # aire entre el tope de capitales y la base de la tilde
 cy = cap_top + gap + hl
